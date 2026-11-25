@@ -1,0 +1,11 @@
+# Update test: the app thinks it's an older build, so the itch.io check offers the current one
+wait 20
+shot alert
+tapon Download
+wait 90
+shot downloaded
+trytap OK
+wait 2
+relaunch
+wait 50
+shot after-update
