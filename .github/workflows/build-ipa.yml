@@ -70,7 +70,9 @@ jobs:
           tag="${GODOT}-stable"
           curl -sSLf -o gl.zip "https://github.com/godotengine/godot-builds/releases/download/$tag/Godot_v${tag}_linux.x86_64.zip" && unzip -qo gl.zip
           G=$(ls Godot_v*linux.x86_64 | head -1); chmod +x "$G"
-          (cd proj && timeout 600 "$OLDPWD/$G" --headless --import > ../out/lab-import.log 2>&1 || true)
+          # run the lab with the port's changes, on a copy (the iPhone job gets the untouched recovery)
+          cp -r proj labproj && python3 ci/patch_project.py labproj > /dev/null
+          (cd labproj && timeout 600 "$OLDPWD/$G" --headless --import > ../out/lab-import.log 2>&1 || true)
           # syntax check of the port's screen script (any parse error shows here, before the Mac build)
           cp ios/ios_screen.gd proj/ios_screen_check.gd
           (cd proj && timeout 120 "$OLDPWD/$G" --headless --check-only --script res://ios_screen_check.gd > ../out/ios-screen-check.log 2>&1; echo "check exit $?" >> ../out/ios-screen-check.log)
@@ -78,9 +80,9 @@ jobs:
           mkdir -p out/lab
           Xvfb :99 -screen 0 1280x720x24 & sleep 2
           export DISPLAY=:99 LIBGL_ALWAYS_SOFTWARE=1
-          (cd proj && timeout -s KILL 150 "$OLDPWD/$G" --rendering-driver opengl3 --path . > ../out/lab-run.log 2>&1 &)
+          (cd labproj && timeout -s KILL 150 "$OLDPWD/$G" --rendering-driver opengl3 --path . > ../out/lab-run.log 2>&1 &)
           for t in 10 25 45 70 100 130; do sleep $((t - ${prev:-0})); prev=$t; timeout 10 import -window root out/lab/lab-${t}s.png || true; done
-          grep -iE 'error|script|shader' out/lab-run.log | sort | uniq -c | sort -rn | head -40 > out/lab-errors.md || true
+          grep -iE 'error|script|shader|IOSScreen' out/lab-run.log | sort | uniq -c | sort -rn | head -40 > out/lab-errors.md || true
       - uses: actions/upload-artifact@v4
         with: { name: godot-project, path: proj, retention-days: 7, include-hidden-files: true }
       - uses: actions/upload-artifact@v4

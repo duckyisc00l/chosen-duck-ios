@@ -3,7 +3,7 @@
 wait 25
 shot menu
 # "campaign"
-tap 54% 51%
+tap 46% 49%
 wait 30
 shot campaign-30s
 wait 30

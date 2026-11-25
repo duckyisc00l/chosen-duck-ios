@@ -69,9 +69,18 @@ func _safe_rect() -> Rect2:
 		safe = Rect2(Vector2.ZERO, win)
 	return safe
 
-func _process(_delta: float) -> void:
+var _log_t := 0.0
+var _log_n := 0
+
+func _process(delta: float) -> void:
 	var win := Vector2(DisplayServer.window_get_size())
 	var safe := _safe_rect()
+	_log_t -= delta
+	if _log_t <= 0.0 and _log_n < 12:   # a few lines in Godot's log, to check the screen maths
+		_log_t = 5.0; _log_n += 1
+		print("IOSScreen: window ", win, " safe ", DisplayServer.get_display_safe_area(), " screen ", DisplayServer.screen_get_size(),
+			" widescreen ", widescreen, " containers ", _arcs.size(), " ratios ", _arcs.map(func(a): return a.ratio if is_instance_valid(a) else -1.0),
+			" touch layers ", _mobile_layers.size())
 	_fit_picture(win, safe)
 	_fit_touch_controls(safe)
 	_update_fs_labels()
