@@ -5,6 +5,8 @@ name: build-ipa
 # 3. run it in the iPhone Simulator; reports go to the r-report branch
 on:
   workflow_dispatch:
+    inputs:
+      ipa: { description: "yes = build the IPA on the Mac too", default: "yes" }
   push:
     branches: [main]
     paths-ignore: ["README.md"]
@@ -49,6 +51,29 @@ jobs:
           echo '## scripts'; find proj -name '*.gd' | sed 's#^proj/##' | sort
           echo '## scenes'; find proj -name '*.tscn' | sed 's#^proj/##' | sort
           } > out/project.md 2>&1; head -60 out/project.md
+      - name: Keep the recovered text sources on branch r-src (scripts, scenes, settings)
+        run: |
+          rm -rf /tmp/src && mkdir -p /tmp/src
+          (cd proj && find . -type f \( -name '*.gd' -o -name '*.tscn' -o -name '*.tres' -o -name '*.godot' -o -name '*.gdshader' -o -name '*.cfg' -o -name '*.json' \) -size -3M -print0 | xargs -0 -I{} cp --parents {} /tmp/src/)
+          cd /tmp/src && git init -qb r-src && git config user.name lab-bot && git config user.email lab-bot@users.noreply.github.com
+          git add -A && git commit -qm "recovered sources ${{ github.run_number }}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}" r-src
+      - name: Lab run on Linux (software OpenGL, screenshots)
+        if: ${{ vars.SKIP_LAB != 'yes' }}
+        continue-on-error: true
+        run: |
+          sudo rm -f /var/lib/man-db/auto-update
+          sudo apt-get install -y -qq xvfb imagemagick libgl1-mesa-dri > /dev/null 2>&1
+          tag="${GODOT}-stable"
+          curl -sSLf -o gl.zip "https://github.com/godotengine/godot-builds/releases/download/$tag/Godot_v${tag}_linux.x86_64.zip" && unzip -qo gl.zip
+          G=$(ls Godot_v*linux.x86_64 | head -1); chmod +x "$G"
+          (cd proj && timeout 600 "$OLDPWD/$G" --headless --import > ../out/lab-import.log 2>&1 || true)
+          mkdir -p out/lab
+          Xvfb :99 -screen 0 1280x720x24 & sleep 2
+          export DISPLAY=:99 LIBGL_ALWAYS_SOFTWARE=1
+          (cd proj && timeout -s KILL 150 "$OLDPWD/$G" --rendering-driver opengl3 --path . > ../out/lab-run.log 2>&1 &)
+          for t in 10 25 45 70 100 130; do sleep $((t - ${prev:-0})); prev=$t; timeout 10 import -window root out/lab/lab-${t}s.png || true; done
+          grep -iE 'error|script|shader' out/lab-run.log | sort | uniq -c | sort -rn | head -40 > out/lab-errors.md || true
       - uses: actions/upload-artifact@v4
         with: { name: godot-project, path: proj, retention-days: 7, include-hidden-files: true }
       - uses: actions/upload-artifact@v4
@@ -56,6 +81,7 @@ jobs:
         with: { name: recover-logs, path: out }
   ipa:
     needs: recover
+    if: ${{ github.event_name == 'push' || inputs.ipa == 'yes' }}
     runs-on: macos-26
     timeout-minutes: 75
     steps:
@@ -118,7 +144,7 @@ jobs:
         with: { name: ipa-logs, path: out }
   publish:
     needs: [recover, ipa]
-    if: always()
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
