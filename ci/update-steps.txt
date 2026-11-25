@@ -3,7 +3,7 @@
 wait 75
 shot alert
 # "Download" on the update alert
-tap 61.7% 39.3%
+tap 38.6% 58.4%
 wait 5
 shot downloading
 wait 60

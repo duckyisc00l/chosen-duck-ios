@@ -4,7 +4,9 @@ wait 25
 shot menu
 # "campaign"
 tap 46% 49%
-wait 30
-shot campaign-30s
-wait 30
+wait 60
 shot campaign-60s
+wait 60
+shot campaign-120s
+wait 60
+shot campaign-180s
