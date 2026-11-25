@@ -109,6 +109,13 @@ jobs:
           open(p,'w').write(t)
           P
           python3 ci/godot/preset.py proj 4 "$BUNDLE" "$NAME" | tee -a out/ipa.md
+          # Godot writes its own log to the app's Documents (user://) so errors can be read from the Files app
+          python3 - proj/project.godot <<'P2'
+          import sys
+          p=sys.argv[1]; t=open(p).read(); line='file_logging/enable_file_logging=true\n'
+          t=t.replace('[debug]\n','[debug]\n\n'+line,1) if '[debug]\n' in t else t+'\n[debug]\n\n'+line
+          open(p,'w').write(t)
+          P2
       - name: Export the Xcode project
         run: |
           set +e; mkdir -p export; cd proj
@@ -139,6 +146,14 @@ jobs:
           echo "simulator slice: $archs; building $a on $host" | tee -a out/ipa.md
           steps=""; [ -f ci/steps.txt ] && steps=ci/steps.txt
           SIM_ARCHS=$a ci/sim/build-and-run.sh "$proj" "$(basename "$proj" .xcodeproj)" out/sim 90 "$steps"
+      - name: Copy Godot's own log out of the simulator
+        if: always()
+        continue-on-error: true
+        run: |
+          udid=$(xcrun simctl list devices booted -j | python3 -c "import json,sys;print([d['udid'] for v in json.load(sys.stdin)['devices'].values() for d in v][0])")
+          dir=$(xcrun simctl get_app_container "$udid" "$BUNDLE" data)
+          find "$dir" -name '*.log' | tee out/godot-logs.txt
+          f=$(find "$dir" -name 'godot.log' | head -1); [ -n "$f" ] && cp "$f" out/godot.log
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: ipa-logs, path: out }
@@ -151,7 +166,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { path: art, pattern: "*-logs" }
       - run: |
-          mkdir -p /tmp/r; for f in $(find art -type f); do d=/tmp/r/$(echo "${f#art/}" | tr / -); case "$f" in *.png|*.jpg|*.gif|*.ips|*project.md) cp "$f" "$d";; *) tail -400 "$f" > "$d";; esac; done
+          mkdir -p /tmp/r; for f in $(find art -type f); do d=/tmp/r/$(echo "${f#art/}" | tr / -); case "$f" in *.png|*.jpg|*.gif|*.ips|*project.md|*godot.log) cp "$f" "$d";; *) tail -400 "$f" > "$d";; esac; done
           git config user.name lab-bot && git config user.email lab-bot@users.noreply.github.com
           git checkout --orphan r-report && git rm -rfq . && rm -rf art ci game
           cp -r /tmp/r/. . && git add -A && git commit -qm "report ${{ github.run_number }}" && git push -f origin r-report
