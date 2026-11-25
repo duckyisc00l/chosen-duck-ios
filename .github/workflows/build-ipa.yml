@@ -71,6 +71,10 @@ jobs:
           curl -sSLf -o gl.zip "https://github.com/godotengine/godot-builds/releases/download/$tag/Godot_v${tag}_linux.x86_64.zip" && unzip -qo gl.zip
           G=$(ls Godot_v*linux.x86_64 | head -1); chmod +x "$G"
           (cd proj && timeout 600 "$OLDPWD/$G" --headless --import > ../out/lab-import.log 2>&1 || true)
+          # syntax check of the port's screen script (any parse error shows here, before the Mac build)
+          cp ios/ios_screen.gd proj/ios_screen_check.gd
+          (cd proj && timeout 120 "$OLDPWD/$G" --headless --check-only --script res://ios_screen_check.gd > ../out/ios-screen-check.log 2>&1; echo "check exit $?" >> ../out/ios-screen-check.log)
+          rm -f proj/ios_screen_check.gd; cat out/ios-screen-check.log
           mkdir -p out/lab
           Xvfb :99 -screen 0 1280x720x24 & sleep 2
           export DISPLAY=:99 LIBGL_ALWAYS_SOFTWARE=1

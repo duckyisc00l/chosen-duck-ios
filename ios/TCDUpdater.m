@@ -274,13 +274,24 @@ static NSString *TCDFirstMatch(NSString *text, NSString *pattern, NSUInteger gro
 @end
 
 // ---- Startup: install a finished download, choose the pack, then check ----
+// the iPhone settings and screen fixes the built-in version has, for a downloaded one too
+// (Godot reads override.cfg next to the game data; ios_screen.gd is copied there by the game)
+static NSString *TCDOverride(void) {
+    NSMutableString *s = [NSMutableString stringWithString:
+        @"[debug]\n\nfile_logging/enable_file_logging=true\n\n"
+        @"[physics]\n\ncommon/physics_interpolation=true\n\n"
+        @"[display]\n\nwindow/handheld/orientation=4\nwindow/ios/allow_high_refresh_rate=true\n\n"];
+    if (TCDExists(@"ios_screen.gd")) [s appendString:@"[autoload]\n\nIOSScreen=\"*user://update/ios_screen.gd\"\n"];
+    return s;
+}
+
 static void TCDInstallDownloaded(void) {
     if (!TCDExists(@"game.pck.new")) return;
     TCDRemove(@"game.pck"); TCDRemove(@"ok"); TCDRemove(@"trying");
     if ([NSFileManager.defaultManager moveItemAtPath:TCDFile(@"game.pck.new") toPath:TCDFile(@"game.pck") error:nil]) {
         TCDWrite(@"build.txt", TCDRead(@"next.txt"));
         // settings the built-in version has, for the downloaded one too (Godot reads override.cfg next to the pack)
-        TCDWrite(@"override.cfg", @"[debug]\n\nfile_logging/enable_file_logging=true\n\n[physics]\n\ncommon/physics_interpolation=true\n");
+        TCDWrite(@"override.cfg", TCDOverride());
         TCDLog([NSString stringWithFormat:@"installed downloaded version %@", TCDRead(@"build.txt")]);
     }
     TCDRemove(@"next.txt");

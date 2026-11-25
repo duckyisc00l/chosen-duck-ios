@@ -22,5 +22,20 @@ put("display", "window/ios/allow_high_refresh_rate", "true")
 put("physics", "common/physics_interpolation", "true")
 # Godot's own log in Documents/logs (visible in the Files app)
 put("debug", "file_logging/enable_file_logging", "true")
+# turn either way round in landscape (the game only allowed one side)
+put("display", "window/handheld/orientation", "4")
+# iPhone screen fixes: widescreen, touch buttons clear of the Dynamic Island (ios/ios_screen.gd)
+put("autoload", "IOSScreen", '"*res://ios_screen.gd"')
 open(p, "w").write(t)
+import shutil, os
+here = os.path.dirname(os.path.abspath(__file__))
+src = os.path.join(here, "..", "ios", "ios_screen.gd")
+shutil.copy(src, sys.argv[1] + "/ios_screen.gd")
+shutil.copy(src, sys.argv[1] + "/ios_screen_src.txt")   # plain copy for downloaded versions
+# export the plain copy too (Godot only exports resources unless told)
+pre = sys.argv[1] + "/export_presets.cfg"
+if os.path.exists(pre):
+    s = open(pre).read()
+    s = s.replace('include_filter=""', 'include_filter="ios_screen_src.txt"')
+    open(pre, "w").write(s)
 print("project.godot patched")
