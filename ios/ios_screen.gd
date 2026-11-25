@@ -24,6 +24,10 @@ func _ready() -> void:
 	if c.load(CFG) == OK:
 		widescreen = c.get_value("screen", "widescreen", true)
 	get_tree().node_added.connect(_on_node_added)
+	# Godot readies the autoloads and the first scene together, so that scene was added before
+	# this could listen: pick up what's already there
+	for n in get_tree().root.find_children("*", "", true, false):
+		_on_node_added(n)
 	_share_with_updates()
 
 func _share_with_updates() -> void:
@@ -43,12 +47,15 @@ func _save() -> void:
 
 func _on_node_added(n: Node) -> void:
 	if n is AspectRatioContainer:
-		_arcs.append(n)
+		if not n in _arcs: _arcs.append(n)
 	elif n is CanvasLayer and n.get_script() and String(n.get_script().resource_path).ends_with("mobile.gd"):
-		_mobile_layers.append(n)
+		if not n in _mobile_layers: _mobile_layers.append(n)
 	# the game's "full screen" option: on iPhone it switches widescreen instead of window mode
 	if n is Label and n.name == "fs" and n.get_script() and String(n.get_script().resource_path).ends_with("fs.gd"):
-		n.ready.connect(_take_over_fs.bind(n), CONNECT_ONE_SHOT)
+		if n.is_node_ready():
+			_take_over_fs.call_deferred(n)
+		else:
+			n.ready.connect(_take_over_fs.bind(n), CONNECT_ONE_SHOT)
 
 func _take_over_fs(lbl: Label) -> void:
 	var b := lbl.get_node_or_null("Button")
