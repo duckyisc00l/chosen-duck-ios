@@ -154,7 +154,7 @@ jobs:
           case " $archs " in *" $host "*) a=$host;; *) a=x86_64;; esac
           echo "simulator slice: $archs; building $a on $host" | tee -a out/ipa.md
           steps=""; [ -f ci/steps.txt ] && steps=ci/steps.txt
-          SIM_ARCHS=$a ci/sim/build-and-run.sh "$proj" "$(basename "$proj" .xcodeproj)" out/sim 90 "$steps"
+          SIM_AXE_VERSION=v1.6.0 SIM_ARCHS=$a ci/sim/build-and-run.sh "$proj" "$(basename "$proj" .xcodeproj)" out/sim 90 "$steps"
       - name: Copy Godot's own log out of the simulator
         if: always()
         continue-on-error: true
@@ -171,7 +171,7 @@ jobs:
           app=$(find export/simdd/Build/Products -maxdepth 2 -name '*.app' | head -1)
           xcrun simctl terminate "$UDID" "$BUNDLE" || true
           xcrun simctl spawn "$UDID" defaults write "$BUNDLE" TCDFakeCurrent -string "old/test"
-          ci/sim/run.sh "$app" out/update 30 ci/update-steps.txt || true
+          SIM_AXE_VERSION=v1.6.0 ci/sim/run.sh "$app" out/update 30 ci/update-steps.txt || true
           dir=$(xcrun simctl get_app_container "$UDID" "$BUNDLE" data)
           { echo '## update folder'; ls -la "$dir/Documents/update"; echo '## updater log'; cat "$dir/Documents/update/updater-log.txt"; } > out/update/update-result.md 2>&1
           f=$(find "$dir" -name 'godot.log' | head -1); [ -n "$f" ] && cp "$f" out/update/godot-after-update.log

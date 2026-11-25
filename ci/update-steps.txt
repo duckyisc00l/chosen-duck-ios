@@ -1,11 +1,13 @@
+# axe: v1.6.0
 # Update test: the app thinks it's an older build, so the itch.io check offers the current one
-wait 20
+wait 40
 shot alert
-tapon Download
-wait 90
+# "Download" on the update alert
+tap 61.7% 39.3%
+wait 5
+shot downloading
+wait 60
 shot downloaded
-trytap OK
-wait 2
 relaunch
 wait 50
 shot after-update

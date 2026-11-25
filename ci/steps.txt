@@ -1,0 +1,10 @@
+# axe: v1.6.0
+# The game is landscape, drawn turned on the portrait screen: taps are raw portrait % (see ci/sim/run.sh)
+wait 25
+shot menu
+# "campaign"
+tap 54% 51%
+wait 30
+shot campaign-30s
+wait 30
+shot campaign-60s
