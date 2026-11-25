@@ -1,7 +1,7 @@
 extends Node
 # iPhone screen fixes for The Chosen Duck, added by the iPhone port (the game's own files stay unchanged):
-#  - widescreen: the game's 4:3 picture is widened to fill the iPhone's screen between the
-#    Dynamic Island side and the other edge, showing more of the world (nothing is stretched)
+#  - widescreen: the game's 4:3 picture is widened to fill the whole iPhone screen, edge to edge,
+#    showing more of the world (nothing is stretched); its menus stay centred
 #  - touch buttons and joystick are kept inside the safe area (clear of the Dynamic Island and
 #    the rounded corners), whichever way round the phone is held
 #  - the game's own "full screen" option (Options > video) switches widescreen on and off
@@ -104,7 +104,7 @@ func _fit_picture(win: Vector2, safe: Rect2) -> void:
 		var orig: float = _orig_ratio[arc]
 		var want: float = orig
 		if widescreen and win.y > 0:
-			want = max(orig, safe.size.x / win.y)
+			want = max(orig, win.x / win.y)   # the whole screen, edge to edge
 		if abs(arc.ratio - want) > 0.001:
 			arc.ratio = want
 		# keep the game's 2D overlays (hearts, menus, dialogue) at their own shape, just wider
@@ -114,9 +114,9 @@ func _fit_picture(win: Vector2, safe: Rect2) -> void:
 			for sv in svc.get_children():
 				if not (sv is SubViewport) or sv.size_2d_override == Vector2i.ZERO:
 					continue
-				_fit_2d(sv, orig, want)
+				_fit_2d(sv, orig, want, win, safe)
 
-func _fit_2d(sv: SubViewport, orig: float, want: float) -> void:
+func _fit_2d(sv: SubViewport, orig: float, want: float, win: Vector2, safe: Rect2) -> void:
 	if not _orig_2d.has(sv):
 		_orig_2d[sv] = sv.size_2d_override
 		sv.tree_exiting.connect(func(): _orig_2d.erase(sv), CONNECT_ONE_SHOT)
@@ -130,31 +130,42 @@ func _fit_2d(sv: SubViewport, orig: float, want: float) -> void:
 	# (X = the extra width on each side); anything anchored to the picture's edges or centre, and
 	# full-screen covers such as fades, stretch to the real edges instead.
 	var x := (w.x - o.x) / 2.0
+	# the Dynamic Island / rounded-corner margins, in the game's 2D units
+	var k := float(w.x) / max(win.x, 1.0)
+	var inset_l := safe.position.x * k
+	var inset_r := (win.x - safe.end.x) * k
 	for layer in sv.get_children():
 		if layer is CanvasLayer:
 			if layer.offset.x != x:
 				layer.offset.x = x
 			for c in layer.get_children():
 				if c is Control:
-					_place_2d(c, x, float(o.x))
+					_place_2d(c, x, float(o.x), inset_l, inset_r)
 
-func _place_2d(c: Control, x: float, design_w: float) -> void:
+func _place_2d(c: Control, x: float, design_w: float, inset_l: float, inset_r: float) -> void:
 	if not c.has_meta("ios_orig"):
 		c.set_meta("ios_orig", [c.offset_left, c.offset_right])
-	if c.get_meta("ios_x", 0.0) == x:
+	var key := Vector3(x, inset_l, inset_r)
+	if c.get_meta("ios_key", Vector3.ZERO) == key:
 		return
 	var orig: Array = c.get_meta("ios_orig")
 	var l: float = orig[0]
 	var r: float = orig[1]
-	if c.anchor_left > 0.0 or c.anchor_right > 0.0:
-		# laid out from the picture's edges: use the real edges of the wide picture
+	if c.anchor_left >= 0.99:
+		# pinned to the right edge: the real right edge, kept clear of the Dynamic Island
+		l -= x + inset_r; r -= x + inset_r
+	elif c.anchor_left > 0.0 and c.anchor_right < 0.99:
+		# centred: the real centre
+		l -= x; r -= x
+	elif c.anchor_right > 0.0:
+		# stretched across (covers, bars): the whole width, edge to edge
 		l -= x; r -= x
 	elif l <= 0.0 and r >= design_w:
 		# a full-screen cover drawn at a fixed 640 size: widen it to the whole picture
 		l -= x; r += x
 	c.offset_left = l
 	c.offset_right = r
-	c.set_meta("ios_x", x)
+	c.set_meta("ios_key", key)
 
 # ---- touch controls inside the safe area ----
 const GROUP := ["Attack", "Run", "Inv"]   # the action buttons on the right
