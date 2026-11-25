@@ -48,13 +48,16 @@ jobs:
           grep -rnE 'InputEventScreenTouch|InputEventScreenDrag|TouchScreenButton|VirtualJoystick|is_touchscreen|OS.has_feature\("(mobile|web_ios|web_android)"\)' --include=*.gd --include=*.tscn proj | head -40
           echo '## keyboard/mouse reads in scripts'
           grep -rnoE 'Input\.(is_action_[a-z_]+|get_axis|get_vector|is_key_pressed|is_mouse_button_pressed)\([^)]*\)|InputEventKey|InputEventMouse[A-Za-z]*|KEY_[A-Z0-9_]+' --include=*.gd proj | sed 's/:[0-9]*:/: /' | sort | uniq -c | sort -rn | head -80
+          echo '## textures with no source image'
+          find proj -name '*.png.import' | while read f; do [ -f "${f%.import}" ] || echo "missing: ${f#proj/}"; done
+          echo '## GDRE failures'; grep -iE 'fail|error|unsupported' proj/gdre_export.log | head -40
           echo '## scripts'; find proj -name '*.gd' | sed 's#^proj/##' | sort
           echo '## scenes'; find proj -name '*.tscn' | sed 's#^proj/##' | sort
           } > out/project.md 2>&1; head -60 out/project.md
       - name: Keep the recovered text sources on branch r-src (scripts, scenes, settings)
         run: |
           rm -rf /tmp/src && mkdir -p /tmp/src
-          (cd proj && find . -type f \( -name '*.gd' -o -name '*.tscn' -o -name '*.tres' -o -name '*.godot' -o -name '*.gdshader' -o -name '*.cfg' -o -name '*.json' \) -size -3M -print0 | xargs -0 -I{} cp --parents {} /tmp/src/)
+          (cd proj && find . -type f \( -name '*.gd' -o -name '*.tscn' -o -name '*.tres' -o -name '*.godot' -o -name '*.gdshader' -o -name '*.cfg' -o -name '*.json' -o -name '*.import' \) -size -3M -print0 | xargs -0 -I{} cp --parents {} /tmp/src/)
           cd /tmp/src && git init -qb r-src && git config user.name lab-bot && git config user.email lab-bot@users.noreply.github.com
           git add -A && git commit -qm "recovered sources ${{ github.run_number }}"
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}" r-src
