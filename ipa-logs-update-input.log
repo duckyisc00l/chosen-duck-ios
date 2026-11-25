@@ -1,0 +1,3 @@
+ci/sim/run.sh: line 14: 37113 Alarm clock: 14         perl -e 'alarm shift; exec @ARGV or exit 127' "$s" "$@"
+✓ Tap at (155.0, 510.0) completed successfully
+com.duckyisc00l.thechosenduck: 45825

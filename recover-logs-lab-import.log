@@ -1,0 +1,226 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+WARNING: UID duplicate detected between res://branches/3dchar/duck/char.tscn and res://branches/3dchar/bubck/char.tscn.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://branches/3dchar/plantsiform/char.tscn and res://branches/3dchar/goose/char.tscn.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://branches/3dchar/slithe/char.tscn and res://branches/3dchar/duck/char.tscn.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (58 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | CameraShake3D[39m[0m
+[   1% ] [90m[1mupdate_scripts_classes[22m | CameraShake3DNode[39m[0m
+[   3% ] [90m[1mupdate_scripts_classes[22m | CameraShakeAutoLoadExample[39m[0m
+[   5% ] [90m[1mupdate_scripts_classes[22m | CameraShakeConstructExample[39m[0m
+[   6% ] [90m[1mupdate_scripts_classes[22m | CameraShakeNodeExample[39m[0m
+[   8% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  10% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  11% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  13% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  15% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  16% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  18% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  20% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  22% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  23% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  27% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  28% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  32% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | Creature[39m[0m
+[  35% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  37% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | _Player[39m[0m
+[  40% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  42% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  44% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  45% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  47% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  49% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  52% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  54% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  55% ] [90m[1mupdate_scripts_classes[22m | Item[39m[0m
+[  57% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  59% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  62% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  64% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  66% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  67% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  71% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  72% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  74% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | Prop[39m[0m
+[  77% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  79% ] [90m[1mupdate_scripts_classes[22m | Sign[39m[0m
+[  81% ] [90m[1mupdate_scripts_classes[22m | Spawner[39m[0m
+[  83% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  86% ] [90m[1mupdate_scripts_classes[22m | Warp[39m[0m
+[  88% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  89% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  91% ] [90m[1mupdate_scripts_classes[22m | Joystick[39m[0m
+[  93% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  94% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  96% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (140 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | grid_albedo.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | CameraShake-icon.jpg[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | tcdcave.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | duck.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | goose.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | app0.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | bater.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | derrapar.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | dogica.ttf[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | circle.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | buttongp_ui.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | shoulder.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | A.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | attack.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | crt.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | duckheart.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | halfheart.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | heart.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | lshoulder.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | sprint.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | tcdhudbuttonsgamepad.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | X.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | zz.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | dialogbox.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | slotduck.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | slotnoduck.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | coal.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | log.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | scrap.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | shiny-stone.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | stick.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | wooden-pickaxe.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | wooden-sword.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | arvore 1.obj[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | Aviator.obj[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | cabana.obj[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | espada.1.obj[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | flor.1.obj[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | flor.2.obj[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | flor.3.obj[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | goggles.obj[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | picareta.1.obj[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | plantsiformbush2.obj[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | clockwork.ogg[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | curious-duck.ogg[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | evenifthetreesdontsway.ogg[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | frigid_blood_snippet.ogg[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | goose-step.ogg[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | INFESTED.ogg[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | into-the-mineshaft.ogg[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | ishallchoosethisone.ogg[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | ost_frigid_blood.ogg[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | sneaking-through.ogg[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | tenseandsweat.ogg[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | the-cave.ogg[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | thoughts.ogg[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | villageogg.ogg[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | swing.ogg[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | quack_damage_w_slap.ogg[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | bubck1.ogg[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | bubck2.ogg[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | bubck3.ogg[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | bubck4.ogg[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | bubck5.ogg[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | bubckdmg1.ogg[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | bubckdmg2.ogg[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | MetalDuckSFX1.ogg[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | MetalDuckSFX2.ogg[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | MetalDuckSFX3.ogg[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | MetalDuckSFX4.ogg[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | MetalDuckSFXDEATH.ogg[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | MetalDuckSFXDMG1.ogg[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | MetalDuckSFXDMG2.ogg[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | MetalDuckSFXDMG3.ogg[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | plantsiform1.ogg[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | plantsiform2.ogg[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | plantsiform3.ogg[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | plantsiform4.ogg[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | plantsiform5.ogg[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | plantsiformdmg.ogg[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | slimedmg2.ogg[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | slimedmg.ogg[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | slimer1.ogg[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | slimer2.ogg[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | slimerdeath.ogg[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | slimerdeathdelay.ogg[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | squishslimer.ogg[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | acc_slithe.ogg[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | SlitheSFX1.ogg[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | SlitheSFX2.ogg[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | SlitheSFX3.ogg[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | SlitheSFX4.ogg[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | SlitheSFXDeath.ogg[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | SlitheSFXDMG1.ogg[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | SlitheSFXDMG3.ogg[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | quacksprinkle.ogg[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | sprinkle2.ogg[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | click.ogg[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | select.ogg[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | selecthover.ogg[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | grab.ogg[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | pop.ogg[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | popreverse.ogg[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | slam.ogg[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | logotcd.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | tcdhist.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | AUTUMNLEAVESPLANTSI.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | duckshadow.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | eye1.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | eyegoose.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | eyenoctoragemetallico.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | EYESPLANTSI.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | feathers.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | gooseem.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | Grass1.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | Grass2.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | grass.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | grassatp1.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | grassatp2.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | LEAVESPLANTSI.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | metallicoeye.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | metalplate.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | mtbl.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | musgo.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | path1.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | path2.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | path3.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | rusmoskin.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | sky00.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | slithepupil.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | tronco0.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | tronco.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | WOODPLANTSI.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | andando.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | treeplaceholder.jpeg[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | joystick_base_outline.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | joystick_tip_arrows.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | icon000.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | icon.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | icon.svg[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

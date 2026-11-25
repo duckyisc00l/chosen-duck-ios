@@ -1,0 +1,57 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API OpenGL ES 3.0 APPLE-23.1.1 - Compatibility - Using Device: Apple Inc. - Apple Software Renderer
+
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+ERROR: Mouse is not supported by this display server.
+   at: mouse_get_position (servers/display/display_server.cpp:536)
+IOSScreen: window (2622.0, 1206.0) safe [P: (186, 0), S: (2250, 1146)] screen (2622, 1206) widescreen true containers 1 ratios [1.333899974823] touch layers 0
+WARNING: Image format RGBAFloat not supported by hardware, converting to RGBAHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBAFloat not supported by hardware, converting to RGBAHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBAFloat not supported by hardware, converting to RGBAHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBAFloat not supported by hardware, converting to RGBAHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+IOSScreen: window (2622.0, 1206.0) safe [P: (186, 0), S: (2250, 1146)] screen (2622, 1206) widescreen true containers 1 ratios [2.17412924766541] touch layers 0
+IOSScreen: window (2622.0, 1206.0) safe [P: (186, 0), S: (2250, 1146)] screen (2622, 1206) widescreen true containers 0 ratios [] touch layers 0
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+[]
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)
+WARNING: Image format RGBFloat not supported by hardware, converting to RGBHalf.
+   at: _get_gl_image_and_format (drivers/gles3/storage/texture_storage.cpp:734)

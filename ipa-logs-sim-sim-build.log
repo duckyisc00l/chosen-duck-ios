@@ -1,0 +1,400 @@
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module TheChosenDuck --target-device iphone --target-device ipad --minimum-deployment-target 15.0 --output-format human-readable-text --link /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Launch\ Screen.storyboardc
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_AvailabilityInternal-8IAH3JWNRX9POZJDQSKVL4CXB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/DeveloperToolsSupport-23L86Y3CAKETQG2ZHX240QLX0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/ptrauth-BO946EGZTADU9F7BYT0E62G8S.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_stddef-BHTL1VKOSSQFGKDEN4XKJKL6O.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_stdbool-490BHJ7K6KVDJH8RXKLVR92RR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/SwiftShims-3VTTT3S3PPGFH5K9XLIA3DEDP.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/ptrcheck-B1V45U3LTYAJ6VCFQBUY75F0M.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_stdarg-F5KTXSHP5QI1RJ05JTDXLQCIK.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_SwiftConcurrencyShims-7CYFBRRH6Z0GX5DTAPHRLDFCD.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_DarwinFoundation1-7B0SZ37ACQL6O0168VFIGL5QW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_float-AKCPX9KC4NRU47D67JXRUIP88.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_DarwinFoundation2-5X93593I118ZX6CXLAB4P06BA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_limits-38UP45R2Q110JCO5I16DJ48IR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/sys_types-D6N4ZHXIRMH6EHG0D325PH6WW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_stdint-4ZXG5975JLP6KXSH4IN1D3EJP.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_tgmath-2XMZKUR5KA36TW6GBC084TRRR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_stdatomic-1UUO79S7XW0F71QVRO96JX8JW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_DarwinFoundation3-A5A86MFPEDYXGEPTMCEIUOXN1.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_intrinsics-2MKAZ15K6GAE7M8Y9DQ8WCGLA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/_Builtin_inttypes-DIJKF1SUNGZS2O5G5M8KNHT69.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Darwin-ESH3E32BWHO7PM76B7YW700E5.pcm
+
+LinkAssetCatalog /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/Images.xcassets (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-linkAssetCatalog --thinned /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app --plist-output /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/AppIcon76x76@2x~ipad.png (in target 'TheChosenDuck' from project 'TheChosenDuck')
+note: Emplaced /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/AppIcon60x60@2x.png (in target 'TheChosenDuck' from project 'TheChosenDuck')
+note: Emplaced /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Assets.car (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+ProcessInfoPlistFile /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Info.plist /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/TheChosenDuck-Info.plist (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-infoPlistUtility /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/TheChosenDuck-Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Launch\ Screen-SBPartialInfo.plist -additionalcontentfile /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/assetcatalog_generated_info.plist -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Info.plist
+warning: The value for NSCameraUsageDescription must be a non-empty string. (in target 'TheChosenDuck' from project 'TheChosenDuck')
+warning: The value for NSMicrophoneUsageDescription must be a non-empty string. (in target 'TheChosenDuck' from project 'TheChosenDuck')
+warning: The value for NSPhotoLibraryUsageDescription must be a non-empty string. (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/ObjectiveC-92SXK4SJ553K6DR9674W5NRUT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/MachO-9SOOE5TZQC268ZBWUILED2J4N.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/simd-7YP6DMU6QXD4BZ40HJTSMVVL7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/os_object-2SZ239MV7GXWLFAO9V1L77AMT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/os_workgroup-5ZLY1DZA78O4953O21HGP81TT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Dispatch-8QJFDTSG0POEZ1J1JBGQJKL74.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/XPC-55IXNPY0UK6RJB1CBOLD50MWT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreFoundation-AI4255JVC9XYON0RUUOHY40D1.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/os-DP2J5WCSEI5WTS57SIR1767TI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CFNetwork-8UB2IFGG4E1IGN0EYMP9NH9X8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Security-85HOO3SLBBNGG21QRKMUR99QY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreGraphics-84MDSDSTSKJ0GOPP2Q89A8TR3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Spatial-AS19TZEUMPQS4V0UXHUTGBCEW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Foundation-2P1G2YVZIWZL3CL4XFZFOHC9Z.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreText-6S9D41E77068CGSR8TRVS3V7I.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/ImageIO-8TP3AOR16V561LX1XVHEWHSBY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreTransferable-78BJMU76HZ2GQXA3JIDNU2HBX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/IOSurface-42N53RV0LON04O3C40Q0WBRXR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreData-5EQNDM5ZFOD19VUXI9UOY1N51.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/DataDetection-ERRWGM220M4S57B170HB69XMI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/OpenGLES-D8K0PP39PO3Z3RJEJLICJRSI7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Metal-BFM5KGBABLAUXTHXCL06JHVBL.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/UniformTypeIdentifiers-9BZLWRNJLRQTIDA4OR30DIY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Symbols-59H17VGC7SDD9T4XVDZKBCLH3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/UserNotifications-EZDI8SR98GEMTEHZLXN2SXHT3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/UIUtilities-1OSV2RG8Z0C9PWC3DTHZ04R34.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/FileProvider-5GMNXXJUXQU4YP51C7W6840E6.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Accessibility-6ZY4JDL3Q7A2I09872OIETMNW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreVideo-ET9BEP2YPOXCW0DUCDCLS03P2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/OSLog-BT95112T8LBDD7DKRLPUOVFSH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/QuartzCore-7G59BHBL36QW7EMTXUWPMPHL4.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/CoreImage-E62MJ8FKL1P15I7C4KZVQX1YW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/SwiftUICore-9XIUP7Q6NZ8EB2FL22TMDIHG2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/UIKit-10I2V076W24CAB2ZPUVP4OO94.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/SwiftUI-31A7ZAXWPNMWGLEG8BHVGT8AV.pcm
+
+SwiftGeneratePch normal x86_64 Compiling\ bridging\ header (in target 'TheChosenDuck' from project 'TheChosenDuck')
+1 warning generated.
+/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.h:31:9: warning: #pragma once in main file
+29 | /**************************************************************************/
+30 | 
+31 | #pragma once
+   |         `- warning: #pragma once in main file
+32 | 
+33 | // #import <Foundation/Foundation.h>
+
+SwiftDriverJobDiscovery normal x86_64 Compiling bridging header (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ TheChosenDuck (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+EmitSwiftModule normal x86_64 (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+
+SwiftCompile normal x86_64 Compiling\ dummy.swift /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftCompile normal x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+
+SwiftCompile normal x86_64 Compiling\ GeneratedAssetSymbols.swift /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+SwiftCompile normal x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+
+SwiftDriverJobDiscovery normal x86_64 Compiling dummy.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for TheChosenDuck (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftDriver\ Compilation\ Requirements TheChosenDuck normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name TheChosenDuck -O @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target x86_64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -F /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -F . -F MoltenVK.xcframework -F TheChosenDuck -F TheChosenDuck.xcframework -F libgodot_camera.visionos.debug.xcframework -F libgodot_camera.visionos.release.xcframework -F simdd -F MoltenVK.xcframework/ios-arm64 -F MoltenVK.xcframework/ios-arm64_x86_64-simulator -F TheChosenDuck/dylibs -F TheChosenDuck.xcframework/ios-arm64 -F TheChosenDuck.xcframework/ios-arm64_x86_64-simulator -F libgodot_camera.visionos.debug.xcframework/xros-arm64 -F libgodot_camera.visionos.debug.xcframework/xros-arm64-simulator -F libgodot_camera.visionos.release.xcframework/xros-arm64 -F libgodot_camera.visionos.release.xcframework/xros-arm64-simulator -F simdd/Build -F simdd/Logs -F simdd/Build/Intermediates.noindex -F simdd/Logs/Build -F simdd/Logs/Launch -F simdd/Logs/Localization -F simdd/Logs/Package -F simdd/Logs/Test -F simdd/Build/Intermediates.noindex/XCBuildData -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache -F simdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/project -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/target -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -F simdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata/attachments -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-generated-files.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-own-target-headers.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-project-headers.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/include -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources-normal/x86_64 -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/x86_64 -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-Swift.h -import-objc-header /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.h -working-directory /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/TheChosenDuck-Swift.h /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-Swift.h (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-swiftHeaderTool -arch x86_64 /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-Swift.h -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/TheChosenDuck-Swift.h
+
+Copy /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftmodule (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftmodule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftdoc (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftdoc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.abi.json /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.abi.json (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.abi.json /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/x86_64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftsourceinfo (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftsourceinfo /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+CompileC /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/dummy-e5ed0d7f8dfd84c6f7f8eb32090210f2.o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+    Using response file: /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/82b82416624d2658e5098eb0a28c15c5-common-args.resp
+    
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -ivfsstatcache /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -target x86_64-apple-ios15.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Werror\=deprecated-objc-isa-usage -Werror\=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/82b82416624d2658e5098eb0a28c15c5-common-args.resp -MMD -MT dependencies -MF /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/dummy-e5ed0d7f8dfd84c6f7f8eb32090210f2.d --serialize-diagnostics /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/dummy-e5ed0d7f8dfd84c6f7f8eb32090210f2.dia -c /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.cpp -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/dummy-e5ed0d7f8dfd84c6f7f8eb32090210f2.o
+
+ScanDependencies /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TCDUpdater.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+    Using response file: /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    builtin-ScanDependencies -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.o.scan -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -target x86_64-apple-ios15.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wno-implicit-atomic-properties -Werror\=deprecated-objc-isa-usage -Wno-objc-interface-ivars -Werror\=objc-root-class -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.d --serialize-diagnostics /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.dia -c /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TCDUpdater.m -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.o
+
+SwiftDriverJobDiscovery normal x86_64 Compiling GeneratedAssetSymbols.swift (in target 'TheChosenDuck' from project 'TheChosenDuck')
+
+SwiftDriver\ Compilation TheChosenDuck normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name TheChosenDuck -O @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target x86_64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -F /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -F . -F MoltenVK.xcframework -F TheChosenDuck -F TheChosenDuck.xcframework -F libgodot_camera.visionos.debug.xcframework -F libgodot_camera.visionos.release.xcframework -F simdd -F MoltenVK.xcframework/ios-arm64 -F MoltenVK.xcframework/ios-arm64_x86_64-simulator -F TheChosenDuck/dylibs -F TheChosenDuck.xcframework/ios-arm64 -F TheChosenDuck.xcframework/ios-arm64_x86_64-simulator -F libgodot_camera.visionos.debug.xcframework/xros-arm64 -F libgodot_camera.visionos.debug.xcframework/xros-arm64-simulator -F libgodot_camera.visionos.release.xcframework/xros-arm64 -F libgodot_camera.visionos.release.xcframework/xros-arm64-simulator -F simdd/Build -F simdd/Logs -F simdd/Build/Intermediates.noindex -F simdd/Logs/Build -F simdd/Logs/Launch -F simdd/Logs/Localization -F simdd/Logs/Package -F simdd/Logs/Test -F simdd/Build/Intermediates.noindex/XCBuildData -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache -F simdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/project -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/target -F simdd/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -F simdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata/attachments -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-generated-files.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-own-target-headers.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck-project-headers.hmap -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/include -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources-normal/x86_64 -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources/x86_64 -Xcc -I/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-Swift.h -import-objc-header /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TheChosenDuck/dummy.h -working-directory /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export -experimental-emit-module-separately -disable-cmo
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-1TG4K1EXGRN4H8OCKE24MD4ZW.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-1TG4K1EXGRN4H8OCKE24MD4ZW.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrauth-5NXDRV8MWK524NX1B2VXJQUMD.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrauth-5NXDRV8MWK524NX1B2VXJQUMD.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-2RCC9GU61TP9EZBP78C5SOILE.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-2RCC9GU61TP9EZBP78C5SOILE.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-49ASBM4YR1MXANE4UYHP16K0J.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-49ASBM4YR1MXANE4UYHP16K0J.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdbool-211R6F9PZ54EZ9909I4PNQMNU.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdbool-211R6F9PZ54EZ9909I4PNQMNU.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-E9BRCNOB7799EOW6LFVCQASC7.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-E9BRCNOB7799EOW6LFVCQASC7.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-B6KFJECWCPSBRMV98VXUESWZE.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-B6KFJECWCPSBRMV98VXUESWZE.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-14WC6OCMX543NH0V5N757A7BV.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-14WC6OCMX543NH0V5N757A7BV.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-90SVJNPW1C0ERWOXNTRDWF6JJ.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-90SVJNPW1C0ERWOXNTRDWF6JJ.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_limits-317MTAK60FEI8LY29WRWLZR5W.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_limits-317MTAK60FEI8LY29WRWLZR5W.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-EBZX05TWJLJ8W9I20R311C9DP.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-EBZX05TWJLJ8W9I20R311C9DP.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation3-9WW283BWO6B3MYB4JAD2PV2FK.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation3-9WW283BWO6B3MYB4JAD2PV2FK.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_inttypes-16I6LVUMTE3MMFOJPMFEMBBR3.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_inttypes-16I6LVUMTE3MMFOJPMFEMBBR3.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Darwin-8N4PIJXUD96NM34VBELZDSQF.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Darwin-8N4PIJXUD96NM34VBELZDSQF.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ObjectiveC-CLVKPXI94FNBU1FPD7DYRQJSW.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ObjectiveC-CLVKPXI94FNBU1FPD7DYRQJSW.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/os_object-57XCWVCZ5RKXQRQN71RQK1LE3.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/os_object-57XCWVCZ5RKXQRQN71RQK1LE3.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/os_workgroup-9FW8OCPYEA26VKGCQMOQETV8P.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/os_workgroup-9FW8OCPYEA26VKGCQMOQETV8P.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Dispatch-54AGTN5537PVJ8EMV0WLU8VHT.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Dispatch-54AGTN5537PVJ8EMV0WLU8VHT.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/XPC-9OVCE587382QV50C7F8HAHA3B.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/XPC-9OVCE587382QV50C7F8HAHA3B.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreFoundation-EL982XNAYP8JNEI5P1K8WWJFL.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreFoundation-EL982XNAYP8JNEI5P1K8WWJFL.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CFNetwork-A7TZG3R8R9BSHZ3QU8CKHMX4R.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CFNetwork-A7TZG3R8R9BSHZ3QU8CKHMX4R.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreGraphics-9PBKDOMZ8Y04Q54769GQJPQ56.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreGraphics-9PBKDOMZ8Y04Q54769GQJPQ56.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Security-AC9NQJ7SLNVOJBSLSWI59GB8M.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Security-AC9NQJ7SLNVOJBSLSWI59GB8M.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Foundation-6AAISAFMN6LBQ660EL81IDVKG.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Foundation-6AAISAFMN6LBQ660EL81IDVKG.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ImageIO-9L6UGXVVQKNG01PDPFI3Y9VGT.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/ImageIO-9L6UGXVVQKNG01PDPFI3Y9VGT.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreText-DDH6KP0NMZAF70UL2GM94OWH8.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreText-DDH6KP0NMZAF70UL2GM94OWH8.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/OpenGLES-3JZ0E42TBYT67E3JS55CAJ5R0.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/OpenGLES-3JZ0E42TBYT67E3JS55CAJ5R0.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/IOSurface-84EM1JNSXIQ8K9BFW7GSB2P74.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/IOSurface-84EM1JNSXIQ8K9BFW7GSB2P74.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/FileProvider-9QUM7CUER03D98EOTPKB0T9Z4.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/FileProvider-9QUM7CUER03D98EOTPKB0T9Z4.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UIUtilities-2BTSRUZYWZ8KKK4UC3FTAU9EZ.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UIUtilities-2BTSRUZYWZ8KKK4UC3FTAU9EZ.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Metal-A80UYTW881OZ87HJMMDRK12UV.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Metal-A80UYTW881OZ87HJMMDRK12UV.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Symbols-4NUISQECHFFUZA7ZHC3VRMUU2.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/Symbols-4NUISQECHFFUZA7ZHC3VRMUU2.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UserNotifications-42MPJZ2TYA6HCEVCITKHA2B3S.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UserNotifications-42MPJZ2TYA6HCEVCITKHA2B3S.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreVideo-8KOPHDCHOO35ES6980QETFJ3I.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreVideo-8KOPHDCHOO35ES6980QETFJ3I.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/QuartzCore-6DIH9YAROG0EJQK9KP1ZMWV6B.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/QuartzCore-6DIH9YAROG0EJQK9KP1ZMWV6B.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreImage-AF81F07O1KPAND43M566JW1BR.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/CoreImage-AF81F07O1KPAND43M566JW1BR.scan
+
+PrecompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UIKit-ASYKVM2LRN8QPVRCCC0W4KB36.scan
+    cd /
+    builtin-precompileModule /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/ExplicitPrecompiledModules/UIKit-ASYKVM2LRN8QPVRCCC0W4KB36.scan
+
+CompileC /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TCDUpdater.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    
+    Using response file: /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -target x86_64-apple-ios15.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wno-implicit-atomic-properties -Werror\=deprecated-objc-isa-usage -Wno-objc-interface-ivars -Werror\=objc-root-class -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.d --serialize-diagnostics /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.dia -c /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/TCDUpdater.m -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TCDUpdater.o
+
+Ld /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck normal (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -Xlinker -reproducible -target x86_64-apple-ios15.0-simulator -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -Os -L/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -L/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -L. -LMoltenVK.xcframework -LTheChosenDuck -LTheChosenDuck.xcframework -Llibgodot_camera.visionos.debug.xcframework -Llibgodot_camera.visionos.release.xcframework -Lsimdd -LMoltenVK.xcframework/ios-arm64 -LMoltenVK.xcframework/ios-arm64_x86_64-simulator -LTheChosenDuck/dylibs -LTheChosenDuck.xcframework/ios-arm64 -LTheChosenDuck.xcframework/ios-arm64_x86_64-simulator -Llibgodot_camera.visionos.debug.xcframework/xros-arm64 -Llibgodot_camera.visionos.debug.xcframework/xros-arm64-simulator -Llibgodot_camera.visionos.release.xcframework/xros-arm64 -Llibgodot_camera.visionos.release.xcframework/xros-arm64-simulator -Lsimdd/Build -Lsimdd/Logs -Lsimdd/Build/Intermediates.noindex -Lsimdd/Logs/Build -Lsimdd/Logs/Launch -Lsimdd/Logs/Localization -Lsimdd/Logs/Package -Lsimdd/Logs/Test -Lsimdd/Build/Intermediates.noindex/XCBuildData -Lsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache -Lsimdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata -Lsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/project -Lsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/target -Lsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -Lsimdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata/attachments -F/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphonesimulator -F/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator -F. -FMoltenVK.xcframework -FTheChosenDuck -FTheChosenDuck.xcframework -Flibgodot_camera.visionos.debug.xcframework -Flibgodot_camera.visionos.release.xcframework -Fsimdd -FMoltenVK.xcframework/ios-arm64 -FMoltenVK.xcframework/ios-arm64_x86_64-simulator -FTheChosenDuck/dylibs -FTheChosenDuck.xcframework/ios-arm64 -FTheChosenDuck.xcframework/ios-arm64_x86_64-simulator -Flibgodot_camera.visionos.debug.xcframework/xros-arm64 -Flibgodot_camera.visionos.debug.xcframework/xros-arm64-simulator -Flibgodot_camera.visionos.release.xcframework/xros-arm64 -Flibgodot_camera.visionos.release.xcframework/xros-arm64-simulator -Fsimdd/Build -Fsimdd/Logs -Fsimdd/Build/Intermediates.noindex -Fsimdd/Logs/Build -Fsimdd/Logs/Launch -Fsimdd/Logs/Localization -Fsimdd/Logs/Package -Fsimdd/Logs/Test -Fsimdd/Build/Intermediates.noindex/XCBuildData -Fsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache -Fsimdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata -Fsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/project -Fsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/target -Fsimdd/Build/Intermediates.noindex/XCBuildData/PIFCache/workspace -Fsimdd/Build/Intermediates.noindex/XCBuildData/a87695d22a2883c95dc3df160e9e330c.xcbuilddata/attachments -filelist /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck_lto.o -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck_dependency_info.dat -stdlib\=libc++ -fobjc-arc -fobjc-link-runtime -L/Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.swiftmodule @/Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck-linker-args.resp -lMoltenVK -lgodot -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck
+
+CopySwiftLibs /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck --scan-folder /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Frameworks --scan-folder /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/PlugIns --scan-folder /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/SystemExtensions --scan-folder /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.oTiV7Y/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.oTiV7Y/Metal.xctoolchain --module-name TheChosenDuck --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 15.0 --bundle-identifier com.duckyisc00l.thechosenduck --output /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app --target-triple x86_64-apple-ios15.0-simulator --binary-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck --dependency-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck_dependency_info.dat --stringsdata-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.SwiftFileList --metadata-file-list /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/Objects-normal/x86_64/TheChosenDuck.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-11-25 05:09:34.417 appintentsmetadataprocessor[8816:29425] Starting appintentsmetadataprocessor export
+2026-11-25 05:09:34.426 appintentsmetadataprocessor[8816:29425] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+GenerateDSYMFile /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app.dSYM /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/TheChosenDuck -o /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app.dSYM
+
+AppIntentsSSUTraining (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Info.plist --temp-dir-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/ssu --bundle-id com.duckyisc00l.thechosenduck --product-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app --extracted-metadata-path /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Metadata.appintents --metadata-file-list /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Intermediates.noindex/TheChosenDuck.build/Release-iphonesimulator/TheChosenDuck.build/TheChosenDuck.DependencyMetadataFileList --source-file /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app/Info.plist --archive-ssu-assets
+2026-11-25 05:09:34.468 appintentsnltrainingprocessor[8873:29545] Parsing options for appintentsnltrainingprocessor
+2026-11-25 05:09:34.469 appintentsnltrainingprocessor[8873:29545] Starting AppIntents SSU YAML Generation
+2026-11-25 05:09:34.470 appintentsnltrainingprocessor[8873:29545] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-RegisterExecutionPolicyException /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app
+
+Validate /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    builtin-validationUtility /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app -validate-for-store -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app (in target 'TheChosenDuck' from project 'TheChosenDuck')
+    cd /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export
+    /usr/bin/touch -c /Users/runner/work/chosen-duck-ios/chosen-duck-ios/export/simdd/Build/Products/Release-iphonesimulator/TheChosenDuck.app
+
+** BUILD SUCCEEDED **
+

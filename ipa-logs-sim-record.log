@@ -1,0 +1,28 @@
+Note: No display specified. Defaulting to display: 24518D01-BD2D-429C-AB03-957957348D5C (screenID: 1, name: LCD)
+Recording started
+Recording completed. Writing to disk.
+
+Wrote video to: /Users/runner/work/chosen-duck-ios/chosen-duck-ios/out/sim/sim-steps.mov
+/Users/runner/work/chosen-duck-ios/chosen-duck-ios/ci/sim/frames.swift:13:34: warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+11 | gen.requestedTimeToleranceBefore = CMTime(seconds: 0.5, preferredTimescale: 600)
+12 | gen.requestedTimeToleranceAfter = CMTime(seconds: 0.5, preferredTimescale: 600)
+13 | let dur = CMTimeGetSeconds(asset.duration)
+   |                                  `- warning: 'duration' was deprecated in macOS 13.0: Use load(.duration) instead [#DeprecatedDeclaration]
+14 | var done = 0
+15 | for i in 0..<n {
+
+IOServiceMatchingfailed for: AppleM2ScalerParavirtDriver
+/Users/runner/work/chosen-duck-ios/chosen-duck-ios/ci/sim/frames.swift:17:29: warning: 'copyCGImage(at:actualTime:)' was deprecated in macOS 15.0: Use generateCGImageAsynchronouslyForTime:completionHandler: instead [#DeprecatedDeclaration]
+15 | for i in 0..<n {
+16 |     let t = CMTime(seconds: dur * Double(i) / Double(max(n - 1, 1)) * 0.995, preferredTimescale: 600)
+17 |     guard let cg = try? gen.copyCGImage(at: t, actualTime: nil),
+   |                             `- warning: 'copyCGImage(at:actualTime:)' was deprecated in macOS 15.0: Use generateCGImageAsynchronouslyForTime:completionHandler: instead [#DeprecatedDeclaration]
+18 |           let png = NSBitmapImageRep(cgImage: cg).representation(using: .png, properties: [:]) else { continue }
+19 |     try? png.write(to: URL(fileURLWithPath: a[2]).appendingPathComponent(String(format: "f%03d.png", i)))
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+video 241 s, 24 frames
+IOServiceMatchingfailed for: AppleM2ScalerParavirtDriver
+avconvert completed with error:0.
+
+frames: 24 from recording
