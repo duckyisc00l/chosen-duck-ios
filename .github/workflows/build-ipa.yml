@@ -1,0 +1,131 @@
+name: build-ipa
+# The Chosen Duck (Godot 4.7.2 web build from itch.io) -> unsigned iPhone IPA.
+# 1. recover the Godot project from game/index.pck with GDRE Tools (Linux)
+# 2. export it for iOS with the same Godot version and build it unsigned (Mac)
+# 3. run it in the iPhone Simulator; reports go to the r-report branch
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ["README.md"]
+permissions:
+  contents: write
+concurrency:
+  group: build-ipa
+  cancel-in-progress: true
+env:
+  GODOT: "4.7.2"
+  NAME: "The Chosen Duck"
+  BUNDLE: "com.duckyisc00l.thechosenduck"
+  GH_TOKEN: ${{ github.token }}
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover the project with GDRE Tools
+        run: |
+          mkdir -p out
+          url=$(curl -sSL -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/GDRETools/gdsdecomp/releases/latest \
+            | python3 -c "import json,sys;r=json.load(sys.stdin);print(r['tag_name'],file=sys.stderr);print([a['browser_download_url'] for a in r['assets'] if 'linux' in a['name'].lower() and a['name'].endswith('.zip')][0])")
+          echo "GDRE: $url" | tee -a out/recover.md
+          curl -sSL -o gdre.zip "$url" && unzip -qo gdre.zip -d gdre
+          bin=$(find gdre -type f \( -name 'gdre_tools*x86_64' -o -name 'gdre_tools.x86_64' \) | head -1); chmod +x "$bin"
+          set +e
+          "$bin" --headless --recover="$PWD/game/index.pck" --output="$PWD/proj" > out/gdre.log 2>&1
+          echo "gdre exit $?" | tee -a out/recover.md
+          tail -40 out/gdre.log >> out/recover.md
+      - name: Report what the game is made of
+        run: |
+          {
+          echo "files: $(find proj -type f | wc -l); scripts: $(find proj -name '*.gd' | wc -l); scenes: $(find proj -name '*.tscn' | wc -l)"
+          echo "C# scripts: $(find proj -name '*.cs' | wc -l); GDExtensions: $(find proj -name '*.gdextension' | wc -l)"
+          echo '## project.godot'; cat proj/project.godot
+          echo '## touch handling in scripts'
+          grep -rnE 'InputEventScreenTouch|InputEventScreenDrag|TouchScreenButton|VirtualJoystick|is_touchscreen|OS.has_feature\("(mobile|web_ios|web_android)"\)' --include=*.gd --include=*.tscn proj | head -40
+          echo '## keyboard/mouse reads in scripts'
+          grep -rnoE 'Input\.(is_action_[a-z_]+|get_axis|get_vector|is_key_pressed|is_mouse_button_pressed)\([^)]*\)|InputEventKey|InputEventMouse[A-Za-z]*|KEY_[A-Z0-9_]+' --include=*.gd proj | sed 's/:[0-9]*:/: /' | sort | uniq -c | sort -rn | head -80
+          echo '## scripts'; find proj -name '*.gd' | sed 's#^proj/##' | sort
+          echo '## scenes'; find proj -name '*.tscn' | sed 's#^proj/##' | sort
+          } > out/project.md 2>&1; head -60 out/project.md
+      - uses: actions/upload-artifact@v4
+        with: { name: godot-project, path: proj, retention-days: 7, include-hidden-files: true }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: recover-logs, path: out }
+  ipa:
+    needs: recover
+    runs-on: macos-26
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: godot-project, path: proj }
+      - name: Get Godot 4.7.2 and its export templates
+        run: |
+          mkdir -p out; tag="${GODOT}-stable"; base="https://github.com/godotengine/godot-builds/releases/download/$tag"
+          curl -sSLf -o godot.zip "$base/Godot_v${tag}_macos.universal.zip" && unzip -q godot.zip
+          app=$(ls -d *.app | head -1); [ "$app" = Godot.app ] || mv "$app" Godot.app
+          curl -sSLf -o tpz.zip "$base/Godot_v${tag}_export_templates.tpz"
+          tdir="$HOME/Library/Application Support/Godot/export_templates/${GODOT}.stable"
+          mkdir -p "$tdir" && unzip -q tpz.zip -d /tmp/tpz && cp -R /tmp/tpz/templates/. "$tdir/"
+          ls "$tdir" | grep -i ios | tee -a out/ipa.md
+          echo "GODOT_BIN=$PWD/Godot.app/Contents/MacOS/Godot" >> $GITHUB_ENV
+      - name: iOS export preset (unsigned Xcode project) with the game's own icon
+        run: |
+          python3 -m pip install -q --break-system-packages pillow 2>/dev/null || python3 -m pip install -q pillow || true
+          cp game/icon.png proj/_itch_icon.png
+          python3 - proj/project.godot <<'P'
+          import re,sys
+          p=sys.argv[1]; t=open(p).read()
+          t=re.sub(r'(?m)^config/icon=.*$','config/icon="res://_itch_icon.png"',t) if 'config/icon=' in t else t.replace('[application]\n','[application]\n\nconfig/icon="res://_itch_icon.png"\n',1)
+          open(p,'w').write(t)
+          P
+          python3 ci/godot/preset.py proj 4 "$BUNDLE" "$NAME" | tee -a out/ipa.md
+      - name: Export the Xcode project
+        run: |
+          set +e; mkdir -p export; cd proj
+          "$GODOT_BIN" --headless --import > ../out/import.log 2>&1
+          "$GODOT_BIN" --headless --export-release "iOS" "$GITHUB_WORKSPACE/export/TheChosenDuck.ipa" > ../out/export.log 2>&1
+          echo "export exit $?" | tee -a ../out/ipa.md; cd ..
+          grep -viE 'reimport: step' out/export.log | tail -40 >> out/ipa.md; ls -la export | tee -a out/ipa.md
+      - name: Build unsigned IPA
+        run: |
+          proj=$(find export -maxdepth 2 -name '*.xcodeproj' | head -1); echo "xcodeproj: $proj" | tee -a out/ipa.md
+          [ -n "$proj" ] || exit 1
+          set +e
+          TERM=dumb xcodebuild -project "$proj" -scheme "$(basename "$proj" .xcodeproj)" -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' \
+            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build > out/xcodebuild.log 2>&1
+          xc=$?; echo "xcodebuild exit $xc" | tee -a out/ipa.md
+          grep -E "error:|\*\* BUILD" out/xcodebuild.log | head -30 | tee -a out/ipa.md
+          [ "$xc" = 0 ] || exit 1
+          app=$(find dd/Build/Products -maxdepth 2 -name '*.app' | head -1)
+          mkdir -p Payload && cp -R "$app" Payload/ && zip -qry TheChosenDuck.ipa Payload && ls -la TheChosenDuck.ipa | tee -a out/ipa.md
+          gh release create "build-${{ github.run_number }}" TheChosenDuck.ipa --notes "Unsigned IPA. Install with SideStore, LiveContainer or Sideloadly."
+      - name: Run it in the iPhone Simulator
+        continue-on-error: true
+        run: |
+          proj=$(find export -maxdepth 2 -name '*.xcodeproj' | head -1)
+          sim=$(find export -path '*simulator*' \( -name '*.a' -o -name '*.dylib' \) | head -1)
+          archs=$(lipo -archs "$sim" 2>/dev/null); host=$(uname -m)
+          case " $archs " in *" $host "*) a=$host;; *) a=x86_64;; esac
+          echo "simulator slice: $archs; building $a on $host" | tee -a out/ipa.md
+          steps=""; [ -f ci/steps.txt ] && steps=ci/steps.txt
+          SIM_ARCHS=$a ci/sim/build-and-run.sh "$proj" "$(basename "$proj" .xcodeproj)" out/sim 90 "$steps"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: ipa-logs, path: out }
+  publish:
+    needs: [recover, ipa]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: art, pattern: "*-logs" }
+      - run: |
+          mkdir -p /tmp/r; for f in $(find art -type f); do d=/tmp/r/$(echo "${f#art/}" | tr / -); case "$f" in *.png|*.jpg|*.gif|*.ips|*project.md) cp "$f" "$d";; *) tail -400 "$f" > "$d";; esac; done
+          git config user.name lab-bot && git config user.email lab-bot@users.noreply.github.com
+          git checkout --orphan r-report && git rm -rfq . && rm -rf art ci game
+          cp -r /tmp/r/. . && git add -A && git commit -qm "report ${{ github.run_number }}" && git push -f origin r-report
