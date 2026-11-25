@@ -131,9 +131,9 @@ func _fit_2d(sv: SubViewport, orig: float, want: float, win: Vector2, safe: Rect
 	# full-screen covers such as fades, stretch to the real edges instead.
 	var x := (w.x - o.x) / 2.0
 	# the Dynamic Island / rounded-corner margins, in the game's 2D units
-	var k := float(w.x) / max(win.x, 1.0)
-	var inset_l := safe.position.x * k
-	var inset_r := (win.x - safe.end.x) * k
+	var k: float = float(w.x) / maxf(win.x, 1.0)
+	var inset_l: float = safe.position.x * k
+	var inset_r: float = (win.x - safe.end.x) * k
 	for layer in sv.get_children():
 		if layer is CanvasLayer:
 			if layer.offset.x != x:

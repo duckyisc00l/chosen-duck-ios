@@ -63,7 +63,6 @@ jobs:
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}" r-src
       - name: Lab run on Linux (software OpenGL, screenshots)
         if: ${{ vars.SKIP_LAB != 'yes' }}
-        continue-on-error: true
         run: |
           sudo rm -f /var/lib/man-db/auto-update
           sudo apt-get install -y -qq xvfb imagemagick libgl1-mesa-dri xdotool > /dev/null 2>&1
@@ -86,6 +85,9 @@ jobs:
             [ $t = 25 ] && { timeout 5 xdotool mousemove 640 386 click 1 || true; }
           done
           grep -iE 'error|script|shader|IOSScreen' out/lab-run.log | sort | uniq -c | sort -rn | head -40 > out/lab-errors.md || true
+          # the port's script must load: fail here (cheap Linux minutes) rather than on the Mac
+          if grep -q 'ios_screen.gd' out/lab-run.log && grep -B1 -A1 'ios_screen.gd' out/lab-run.log | grep -q 'SCRIPT ERROR\|Parse Error'; then
+            grep -B1 -A1 'ios_screen.gd' out/lab-run.log; echo "ios_screen.gd has errors"; exit 1; fi
       - uses: actions/upload-artifact@v4
         with: { name: godot-project, path: proj, retention-days: 7, include-hidden-files: true }
       - uses: actions/upload-artifact@v4
