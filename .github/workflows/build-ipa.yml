@@ -120,7 +120,11 @@ jobs:
       - name: Export the Xcode project
         run: |
           set +e; mkdir -p export; cd proj
+          # GDRE's .import files claim iPhone (ETC2/ASTC) textures were made when only PC ones exist,
+          # so Godot wouldn't re-import them: wipe the import cache so every texture is imported fresh
+          rm -rf .godot/imported
           "$GODOT_BIN" --headless --import > ../out/import.log 2>&1
+          echo "iPhone textures made: $(ls .godot/imported | grep -c 'etc2\|astc')" | tee -a ../out/ipa.md
           "$GODOT_BIN" --headless --export-release "iOS" "$GITHUB_WORKSPACE/export/TheChosenDuck.ipa" > ../out/export.log 2>&1
           echo "export exit $?" | tee -a ../out/ipa.md; cd ..
           grep -viE 'reimport: step' out/export.log | tail -40 >> out/ipa.md; ls -la export | tee -a out/ipa.md

@@ -95,6 +95,8 @@ static void TCDChoosePack(void) {
 @property(nonatomic, strong) UIAlertController *progressAlert;
 @property(nonatomic, copy) NSString *pendingBuild;
 @property(nonatomic) long long expectedSize;
+@property(nonatomic) BOOL retried;
+@property(nonatomic) BOOL wrongEngine;
 @end
 
 static TCDUpdater *tcdUpdater = nil;
@@ -149,6 +151,11 @@ static NSString *TCDFirstMatch(NSString *text, NSString *pattern, NSUInteger gro
 - (void)check {
     NSString *current = TCDCurrentBuild();
     [self fetch:TCD_PAGE range:nil done:^(NSData *data, NSInteger st) {
+        if (st == 429 && !self.retried) {   // itch.io asked to slow down: try once more a bit later
+            self.retried = YES; TCDLog(@"itch.io busy (429), trying again in 45 s");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 45 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{ [self check]; });
+            return;
+        }
         if (!data || st != 200) { TCDLog([NSString stringWithFormat:@"offline or page unavailable (%ld)", (long)st]); return; }
         NSString *page = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ?: @"";
         NSString *build = TCDFirstMatch(page, @"html-classic\\.itch\\.zone/html/([0-9]+(?:/[A-Za-z0-9_.\\-]+)*)/index\\.html", 1);
@@ -172,7 +179,14 @@ static NSString *TCDFirstMatch(NSString *text, NSString *pattern, NSUInteger gro
         NSString *pckURL = [base stringByAppendingString:pckName];
         // the Godot version is in the first bytes of the game data
         [self fetch:pckURL range:@"bytes=0-31" done:^(NSData *head, NSInteger st2) {
-            if (!head || head.length < 20) { TCDLog(@"couldn't read the new game data"); return; }
+            if (!head || head.length < 20) {
+                TCDLog([NSString stringWithFormat:@"couldn't read the start of the new game data (status %ld, %lu bytes); will check it after downloading", (long)st2, (unsigned long)head.length]);
+                NSString *mb = self.expectedSize > 0 ? [NSString stringWithFormat:@" (%lld MB)", (self.expectedSize + 524288) / 1048576] : @"";
+                [self ask:@"Update available"
+                  message:[NSString stringWithFormat:@"A new version of The Chosen Duck is out on itch.io. Download it now%@? Your saves are kept.", mb]
+                       ok:@"Download" cancel:@"Later" then:^{ [self download:pckURL build:build]; }];
+                return;
+            }
             const uint8_t *b = head.bytes;
             uint32_t v[5]; memcpy(v, b, 20);
             if (memcmp(b, "GDPC", 4) != 0) { TCDLog(@"new game data isn't a Godot pack"); return; }
@@ -221,9 +235,17 @@ static NSString *TCDFirstMatch(NSString *text, NSString *pattern, NSUInteger gro
     NSDictionary *attr = [fm attributesOfItemAtPath:loc.path error:nil];
     long long got = [attr fileSize];
     NSFileHandle *h = [NSFileHandle fileHandleForReadingAtPath:loc.path];
-    NSData *magic = [h readDataOfLength:4]; [h closeFile];
-    BOOL good = st == 200 && [magic isEqualToData:[@"GDPC" dataUsingEncoding:NSASCIIStringEncoding]] && (self.expectedSize <= 0 || got == self.expectedSize);
+    NSData *head = [h readDataOfLength:20]; [h closeFile];
+    uint32_t v[5] = {0};
+    if (head.length == 20) memcpy(v, head.bytes, 20);
+    BOOL good = st == 200 && head.length == 20 && memcmp(head.bytes, "GDPC", 4) == 0 && (self.expectedSize <= 0 || got == self.expectedSize);
     if (!good) { TCDLog([NSString stringWithFormat:@"download check failed (status %ld, %lld bytes)", (long)st, got]); return; }
+    if (v[2] != TCD_GODOT_MAJOR || v[3] != TCD_GODOT_MINOR) {
+        TCDLog([NSString stringWithFormat:@"downloaded data needs Godot %u.%u: not used", v[2], v[3]]);
+        TCDWrite(@"skip.txt", self.pendingBuild);
+        self.wrongEngine = YES;
+        return;
+    }
     [fm createDirectoryAtPath:TCDDir() withIntermediateDirectories:YES attributes:nil error:nil];
     // don't replace a version that's running right now: the new one is used from the next launch
     NSString *part = TCDFile(@"game.pck.new");
@@ -240,6 +262,8 @@ static NSString *TCDFirstMatch(NSString *text, NSString *pattern, NSUInteger gro
         if (e) {
             if (e.code != NSURLErrorCancelled) [self ask:@"Download failed" message:@"Check your connection. It'll ask again next time you open the game." ok:@"OK" cancel:nil then:nil];
             TCDLog([NSString stringWithFormat:@"download failed: %@", e.localizedDescription]);
+        } else if (self.wrongEngine) {
+            [self ask:@"Update needs a new app" message:@"The new version is made with a newer Godot than this app can run. Ask for a new IPA to get it. You can keep playing this version." ok:@"OK" cancel:nil then:nil];
         } else if (TCDExists(@"game.pck.new")) {
             [self ask:@"Update ready" message:@"Close the game fully and open it again to play the new version." ok:@"OK" cancel:nil then:nil];
         } else {
