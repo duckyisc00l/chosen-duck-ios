@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cok8l5rq5s1a8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8uult"]
+size = Vector3(1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4467s"]
+albedo_color = Color(0.48420775, 0.2847618, 0.12971205, 1)
+
+[node name="APP" type="Node3D" unique_id=48733722]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1635968887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.022289306, 0)
+mesh = SubResource("BoxMesh_8uult")
+surface_material_override/0 = SubResource("StandardMaterial3D_4467s")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dq0w1on47l1d6"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7goera27sqwe" path="res://assets/rendered/arvore 1.obj" id="1"]
+[ext_resource type="Texture2D" uid="uid://chv2e2628xp6w" path="res://assets/textures/tronco0.png" id="2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtr0i"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.61960787)
+albedo_texture = ExtResource("2")
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43mfk"]
+albedo_color = Color(0.2934786, 0.64534557, 0.34803897, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31vc3"]
+albedo_color = Color(0.10980392, 0.5803922, 0.23137255, 1)
+
+[node name="APP" type="Node3D" unique_id=114678864]
+
+[node name="Arvore1" type="MeshInstance3D" parent="." unique_id=877235685]
+transform = Transform3D(-0.014776448, 0, 0.1994534, 0, 0.2, 0, -0.1994534, 0, -0.014776448, 0, 0, 0)
+mesh = ExtResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_rtr0i")
+surface_material_override/1 = SubResource("StandardMaterial3D_rtr0i")
+surface_material_override/2 = SubResource("StandardMaterial3D_rtr0i")
+surface_material_override/3 = SubResource("StandardMaterial3D_rtr0i")
+surface_material_override/4 = SubResource("StandardMaterial3D_43mfk")
+surface_material_override/5 = SubResource("StandardMaterial3D_31vc3")
+surface_material_override/6 = SubResource("StandardMaterial3D_31vc3")
+surface_material_override/7 = SubResource("StandardMaterial3D_31vc3")

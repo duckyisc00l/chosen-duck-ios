@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://cdvuexebvtov4"]
+
+[ext_resource type="Script" uid="uid://dpctmcyyt1al1" path="res://scripts/sign0.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://d3hiaixxkjf1f" path="res://assets/textures/WOODPLANTSI.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bedc3ivftmhnw" path="res://assets/hud/icons/A.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://gmvxd8bt6t2s" path="res://assets/textures/duckshadow.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://lkt0wro5y3kq" path="res://assets/sound/sfx/slam.ogg" id="5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ausg5"]
+size = Vector3(0.2, 0.88757324, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccmn6"]
+shading_mode = 0
+albedo_texture = ExtResource("2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_8lm1j"]
+size = Vector3(0.25141603, 0.88757324, 1.5238647)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwpxi"]
+shading_mode = 0
+albedo_texture = ExtResource("2")
+uv1_scale = Vector3(10, 10, 10)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.7411013
+stencil_flags = 2
+stencil_outline_thickness = 0.015
+
+[sub_resource type="BoxMesh" id="BoxMesh_r1pfi"]
+size = Vector3(0.005132813, 0.6219177, 1.3950462)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oikco"]
+shading_mode = 0
+albedo_color = Color(0.8198715, 0.49779022, 0.38096637, 1)
+albedo_texture = ExtResource("2")
+uv1_scale = Vector3(10, 10, 10)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.7411013
+stencil_flags = 2
+stencil_outline_thickness = 0.015
+
+[sub_resource type="Curve" id="Curve_jauas"]
+_data = [Vector2(0, 0.7191012), 0.0, 0.0, 0, 0, Vector2(0.505618, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_31vc3"]
+curve = SubResource("Curve_jauas")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_43mfk"]
+direction = Vector3(1, 0, 0.2)
+initial_velocity_min = -20.0
+initial_velocity_max = 20.0
+linear_accel_min = 3.9999976
+linear_accel_max = 3.9999976
+scale_curve = SubResource("CurveTexture_31vc3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v775f"]
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_hyepw"]
+material = SubResource("StandardMaterial3D_v775f")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ausg5"]
+size = Vector3(1, 1.5107422, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mtmva"]
+size = Vector3(2.0354004, 2.1635742, 2.2675781)
+
+[node name="PROP" type="CharacterBody3D" unique_id=1288386799]
+collision_layer = 65
+collision_mask = 192
+script = ExtResource("1")
+
+[node name="APP" type="Node3D" parent="." unique_id=1188207005]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="APP" unique_id=2026982996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02495262, 0)
+mesh = SubResource("BoxMesh_ausg5")
+surface_material_override/0 = SubResource("StandardMaterial3D_ccmn6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="APP" unique_id=1599243015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0148681775, 0.7936064, -0.0018981695)
+mesh = SubResource("BoxMesh_8lm1j")
+surface_material_override/0 = SubResource("StandardMaterial3D_vwpxi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="APP" unique_id=812323605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11240625, 0.81013167, -0.0008548498)
+mesh = SubResource("BoxMesh_r1pfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_oikco")
+
+[node name="FX" type="Node3D" parent="." unique_id=778137047]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="FX" unique_id=2003359475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8469423, 0)
+emitting = false
+lifetime = 0.7
+interp_to_end = 0.03
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_43mfk")
+draw_pass_1 = SubResource("BoxMesh_hyepw")
+
+[node name="Ainteract" type="Sprite3D" parent="FX" unique_id=1208405926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7003984, -0.037554026)
+visible = false
+pixel_size = 0.02
+billboard = 1
+texture_filter = 2
+texture = ExtResource("3")
+
+[node name="shadow" type="Node3D" parent="." unique_id=1595465999]
+
+[node name="Sprite3D" type="Sprite3D" parent="shadow" unique_id=612536681]
+transform = Transform3D(4.692834, 1.4264673, -5.7500866e-08, 0, -1.8959926e-07, -4, -1.6342176, 4.0962563, -1.6512e-07, -0.082876906, -0.489, -0.036471844)
+modulate = Color(1, 1, 1, 0.9137255)
+texture_filter = 2
+texture = ExtResource("4")
+
+[node name="SOUND" type="Node3D" parent="." unique_id=783272163]
+
+[node name="HIT" type="AudioStreamPlayer3D" parent="SOUND" unique_id=742274761]
+stream = ExtResource("5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1362063624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2553711, 0)
+shape = SubResource("BoxShape3D_ausg5")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=403079417]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=266099192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032958984, 0.5817871, 0.052734375)
+shape = SubResource("BoxShape3D_mtmva")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

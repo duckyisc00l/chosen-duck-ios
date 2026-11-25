@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bd0csst80pwpm"]
+
+[ext_resource type="Script" uid="uid://cgip5nr81dsgr" path="res://scripts/creature.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bc1iqmmud6wru" path="res://assets/characters/duck/app0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://drpw3ir7ftucp" path="res://assets/fx/circle.png" id="3"]
+
+[sub_resource type="Animation" id="Animation_ua078"]
+resource_name = "Hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../App/MainApp:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08077664, 0.19790277, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 16), Vector2(0, -16), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ddj5i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../App/MainApp:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ctkow"]
+_data = {
+&"Hit": SubResource("Animation_ua078"),
+&"RESET": SubResource("Animation_ddj5i")
+}
+
+[sub_resource type="Animation" id="Animation_ctkow"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vfn1a"]
+resource_name = "default"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(8, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gokwl"]
+_data = {
+&"RESET": SubResource("Animation_ctkow"),
+&"default": SubResource("Animation_vfn1a")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ua078"]
+radius = 48.0
+
+[node name="Node2D" type="Node2D" unique_id=1270768533]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1566477223]
+position = Vector2(468.18268, 247.94691)
+script = ExtResource("1")
+
+[node name="App" type="Node2D" parent="CharacterBody2D" unique_id=1585451586]
+
+[node name="MainApp" type="Sprite2D" parent="CharacterBody2D/App" unique_id=686940782]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2")
+
+[node name="Anims" type="Node2D" parent="CharacterBody2D" unique_id=1139077408]
+
+[node name="Combat01" type="AnimationPlayer" parent="CharacterBody2D/Anims" unique_id=1572752300]
+libraries/ = SubResource("AnimationLibrary_ctkow")
+
+[node name="FX" type="Node2D" parent="CharacterBody2D" unique_id=1057931365]
+
+[node name="Circle" type="Sprite2D" parent="CharacterBody2D/FX" unique_id=728461400]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/FX/Circle" unique_id=2146051109]
+libraries/ = SubResource("AnimationLibrary_gokwl")
+
+[node name="Forward" type="RayCast2D" parent="CharacterBody2D" unique_id=848610497]
+target_position = Vector2(0, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1382113355]
+shape = SubResource("CircleShape2D_ua078")
+debug_color = Color(0.68571764, 0.5009882, 0, 0.41960785)

@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://bi0bb2qu02rh2"]
+
+[ext_resource type="Script" uid="uid://h1luqmmj7fte" path="res://scripts/mobile.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://l1x8oe1i6pjs" path="res://assets/hud/buttons/buttongp_ui.png" id="2"]
+[ext_resource type="Script" uid="uid://br2vdswf3t8fk" path="res://scripts/buttonrotate.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://d4m7j8bwojh2y" path="res://icon000.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b183dauxm5vdi" path="res://assets/hud/icons/attack.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://chpthp6nucr1g" path="res://assets/hud/icons/sprint.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cqsenwintc8i0" path="res://assets/hud/icons/duckheart.png" id="7"]
+[ext_resource type="Script" uid="uid://0ekc0xlqqgh2" path="res://systems/joystick/joystick.gd" id="8"]
+[ext_resource type="Texture2D" uid="uid://drpw3ir7ftucp" path="res://assets/fx/circle.png" id="9"]
+[ext_resource type="FontFile" uid="uid://bwvklgwesggdg" path="res://assets/fonts/dogica.ttf" id="10"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1av4m"]
+font = ExtResource("10")
+font_size = 24
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Mobile" type="CanvasLayer" unique_id=51994503]
+layer = 99
+script = ExtResource("1")
+
+[node name="Attack" type="TextureRect" parent="." unique_id=1302352958]
+modulate = Color(1, 1, 1, 0.76862746)
+self_modulate = Color(0.14901961, 0.14901961, 0.14901961, 0.7019608)
+texture_filter = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(64, 64)
+pivot_offset_ratio = Vector2(0.6, 0)
+texture = ExtResource("2")
+script = ExtResource("3")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Attack" unique_id=517066465]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(19.999998, 19.999998)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4")
+action = "move_attack"
+
+[node name="TextureRect" type="TextureRect" parent="Attack" unique_id=1271058553]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="Run" type="TextureRect" parent="." unique_id=1557063857]
+modulate = Color(1, 1, 1, 0.72156864)
+self_modulate = Color(0.14901961, 0.14901961, 0.14901961, 0.7019608)
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.672
+anchor_right = 1.0
+anchor_bottom = 0.677
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(64, 64)
+pivot_offset_ratio = Vector2(0.6, 0)
+texture = ExtResource("2")
+script = ExtResource("3")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Run" unique_id=2146500542]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(19.999998, 19.999998)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4")
+action = "move_sprint_hold"
+
+[node name="TextureRect" type="TextureRect" parent="Run" unique_id=470515419]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("6")
+
+[node name="Inv" type="TextureRect" parent="." unique_id=164829728]
+modulate = Color(1, 1, 1, 0.72156864)
+self_modulate = Color(0.14901961, 0.14901961, 0.14901961, 0.7019608)
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.305
+anchor_right = 1.0
+anchor_bottom = 0.305
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(64, 64)
+pivot_offset_ratio = Vector2(0.6, 0)
+texture = ExtResource("2")
+script = ExtResource("3")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Inv" unique_id=445585681]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(19.999998, 19.999998)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4")
+action = "move_open_inv"
+
+[node name="TextureRect" type="TextureRect" parent="Inv" unique_id=1619619713]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("7")
+
+[node name="Joystick" type="Control" parent="." unique_id=525688923]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -256.0
+offset_right = 256.0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0, 1)
+script = ExtResource("8")
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_up"
+action_down = "move_down"
+metadata/_custom_type_script = "uid://0ekc0xlqqgh2"
+
+[node name="Base" type="TextureRect" parent="Joystick" unique_id=2130800815]
+modulate = Color(0.096204735, 0.09620475, 0.096204735, 1)
+texture_filter = 1
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
+texture = ExtResource("9")
+
+[node name="Tip" type="TextureRect" parent="Joystick/Base" unique_id=512820427]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 192.0
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1614958811]
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.8
+anchor_right = 0.6
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(0, -0.015)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.101960786, 0.101960786, 0.101960786, 0.68235296)
+
+[node name="play" type="Label" parent="ColorRect" unique_id=34923264]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "double tap to interact"
+label_settings = SubResource("LabelSettings_1av4m")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=70906412]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=580496810]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -24.0
+offset_right = 240.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 1)
+color = Color(0, 0, 0, 0.44705883)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="ColorRect2" unique_id=1263934398]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -15.000046)
+scale = Vector2(14.875, 1.3437515)
+texture_normal = ExtResource("7")
+action = "move_invshow"

@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://bcysavu1jx3gx"]
+
+[ext_resource type="PackedScene" uid="uid://bkq3vqnjkwtec" path="res://branches/warp.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ca38ojs1uwrys" path="res://scripts/spawner0.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://c6m4s7e6cvi4u" path="res://branches/entities/prop.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bcc210678gpai" path="res://branches/entities/item.tscn" id="4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nx6xj"]
+size = Vector3(35, 0.2, 50)
+
+[sub_resource type="Gradient" id="Gradient_vkgmi"]
+colors = PackedColorArray(0.18750206, 0.22342467, 0.19105217, 1, 0.4011817, 0.40118167, 0.40118167, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ldief"]
+gradient = SubResource("Gradient_vkgmi")
+fill = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0c54c"]
+albedo_color = Color(0.37971792, 0.43543285, 0.54140043, 1)
+albedo_texture = SubResource("GradientTexture2D_ldief")
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.14406255, 0.14406255, 0.14406255, 1)
+uv1_scale = Vector3(1.33, 1.33, 1.33)
+uv1_triplanar = true
+uv2_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_j0624"]
+size = Vector3(100, 0.2, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvqwg"]
+albedo_color = Color(0.37971792, 0.43543285, 0.54140043, 1)
+albedo_texture = SubResource("GradientTexture2D_ldief")
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.14406255, 0.14406255, 0.14406255, 1)
+uv1_scale = Vector3(1.33, 1.33, 1.33)
+uv1_triplanar = true
+uv2_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u6no6"]
+size = Vector3(35, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rgpwj"]
+size = Vector3(50, 18.89685, 1.7324336)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gvf8q"]
+size = Vector3(100, 18.897, 1.732)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cevbl"]
+size = Vector3(10, 18.897, 1.732)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmpva"]
+size = Vector3(60, 18.897, 1.732)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7lbti"]
+size = Vector3(100, 1, 50)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v6748"]
+top_radius = 2.0
+bottom_radius = 2.0
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hf08l"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 0.43529412)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7b7a"]
+size = Vector3(47.45117, 3.2891846, 45.104004)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=552473186]
+collision_layer = 128
+collision_mask = 128
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2014266876]
+mesh = SubResource("BoxMesh_nx6xj")
+surface_material_override/0 = SubResource("StandardMaterial3D_0c54c")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1101284165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -50)
+mesh = SubResource("BoxMesh_j0624")
+surface_material_override/0 = SubResource("StandardMaterial3D_uvqwg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1534912773]
+shape = SubResource("BoxShape3D_u6no6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=664064306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.948425, 25.865217)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1553708255]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17, 8.948, 0)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1534339568]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17, 8.948, 0)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=1115600168]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -75, 8.948, -50)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="." unique_id=412844710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8.948, -75)
+shape = SubResource("BoxShape3D_gvf8q")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="." unique_id=1976845540]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 8.948, -50)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=714123854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.549385, 8.948, -25)
+shape = SubResource("BoxShape3D_cevbl")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="." unique_id=1934702698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.845474, 8.948, -25)
+shape = SubResource("BoxShape3D_rmpva")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=18846410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -50)
+shape = SubResource("BoxShape3D_7lbti")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=1083969825]
+size = Vector3(35, 1, 50)
+
+[node name="GPUParticlesCollisionBox3D2" type="GPUParticlesCollisionBox3D" parent="." unique_id=656650188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -50)
+size = Vector3(100, 1, 50)
+
+[node name="Node3D" parent="." unique_id=2104581057 instance=ExtResource("1")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.233324, 0, 21.013683)
+destiny = "greenish-field"
+posDes = Vector3(0, 0.847, -102.003)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1069641772]
+mesh = SubResource("CylinderMesh_v6748")
+surface_material_override/0 = SubResource("StandardMaterial3D_hf08l")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=399705374]
+script = ExtResource("2")
+cooldownMin = 5.0
+cooldownMax = 10.0
+creatureCap = 9
+commonTable = ["metallico", "slithe"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1962466259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1503906, 1.1445923, -0.8859863)
+shape = SubResource("BoxShape3D_g7b7a")
+
+[node name="PROP18" parent="." unique_id=1288386799 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.40267, 1.06004, 7.3701916)
+propName = "stone"
+
+[node name="PROP19" parent="." unique_id=983111887 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.61469, 1.06004, 18.171486)
+propName = "stone"
+
+[node name="PROP34" parent="." unique_id=1992808017 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7586727, 1.06004, -20.339586)
+propName = "iron-ore"
+
+[node name="PROP20" parent="." unique_id=727658264 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.71732, 1.06004, -9.586525)
+propName = "stone"
+
+[node name="PROP21" parent="." unique_id=796022899 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.286008, 1.06004, -0.3588028)
+propName = "stone"
+
+[node name="PROP22" parent="." unique_id=1141979255 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.286008, 1.06004, 13.118155)
+propName = "stone"
+
+[node name="PROP23" parent="." unique_id=1177505033 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.509471, 1.06004, 13.118155)
+propName = "stone"
+
+[node name="PROP24" parent="." unique_id=1575280616 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.948139, 1.06004, 20.545689)
+propName = "stone"
+
+[node name="PROP25" parent="." unique_id=1937532436 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.948139, 1.06004, 2.5760975)
+propName = "stone"
+
+[node name="PROP26" parent="." unique_id=1149856846 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0309725, 1.06004, 9.534668)
+propName = "stone"
+
+[node name="PROP35" parent="." unique_id=296168727 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0309725, 1.06004, -22.122513)
+propName = "stone"
+
+[node name="PROP36" parent="." unique_id=1606445439 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87196, 1.06004, -35.95064)
+propName = "stone"
+
+[node name="PROP37" parent="." unique_id=1889276749 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3174248, 1.06004, -30.592793)
+propName = "stone"
+
+[node name="PROP38" parent="." unique_id=1780554584 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.835167, 1.06004, -30.592793)
+propName = "stone"
+
+[node name="PROP39" parent="." unique_id=1596353389 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.316456, 1.06004, -29.641266)
+propName = "stone"
+
+[node name="PROP40" parent="." unique_id=1163841150 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.661819, 1.06004, -30.592793)
+propName = "iron-ore"
+
+[node name="PROP41" parent="." unique_id=1381257676 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.361565, 1.06004, -33.55295)
+propName = "iron-ore"
+
+[node name="PROP42" parent="." unique_id=187042698 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.970936, 1.06004, -36.60686)
+propName = "stone"
+
+[node name="PROP43" parent="." unique_id=732092780 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.307617, 1.06004, -27.98835)
+propName = "stone"
+
+[node name="PROP44" parent="." unique_id=148263388 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.322998, 1.06004, -41.405033)
+propName = "stone"
+
+[node name="PROP45" parent="." unique_id=814851536 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.2331, 1.06004, -41.405033)
+propName = "stone"
+
+[node name="PROP46" parent="." unique_id=2062639542 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.2331, 1.06004, -31.473877)
+propName = "stone"
+
+[node name="PROP47" parent="." unique_id=1817719977 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.944374, 1.06004, -41.385593)
+propName = "stone"
+
+[node name="PROP48" parent="." unique_id=990295109 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.043831, 1.06004, -44.714985)
+propName = "stone"
+
+[node name="PROP49" parent="." unique_id=283557628 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.622461, 1.06004, -39.494934)
+propName = "stone"
+
+[node name="PROP50" parent="." unique_id=1443714539 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.283361, 1.06004, -41.102932)
+propName = "stone"
+
+[node name="PROP51" parent="." unique_id=2103477309 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.19409, 1.06004, -51.93053)
+propName = "stone"
+
+[node name="PROP52" parent="." unique_id=523286219 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.41879, 1.06004, -57.065105)
+propName = "stone"
+
+[node name="PROP53" parent="." unique_id=977841810 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.008873, 1.06004, -53.259502)
+propName = "gold-ore"
+
+[node name="PROP54" parent="." unique_id=1745166576 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.231186, 1.06004, -50.033276)
+propName = "stone"
+
+[node name="PROP55" parent="." unique_id=491038275 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6910725, 1.06004, -52.23563)
+propName = "stone"
+
+[node name="PROP27" parent="." unique_id=2020242046 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0165272, 1.06004, 1.5759802)
+propName = "coal-ore"
+
+[node name="PROP31" parent="." unique_id=1590472227 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.746422, 1.06004, -7.9692507)
+propName = "stone"
+
+[node name="PROP32" parent="." unique_id=1054067945 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.499365, 1.06004, -0.3951273)
+propName = "stone"
+
+[node name="PROP33" parent="." unique_id=1372544921 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28607273, 1.06004, -11.540023)
+propName = "stone"
+
+[node name="PROP28" parent="." unique_id=724357115 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0309725, 1.06004, -3.1818886)
+propName = "stone"
+
+[node name="PROP29" parent="." unique_id=1683051694 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0309725, 1.06004, -14.043413)
+propName = "coal-ore"
+
+[node name="PROP30" parent="." unique_id=1449331823 instance=ExtResource("3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.603907, 1.06004, -8.814985)
+propName = "coal-ore"
+
+[node name="RigidBody3D18" parent="." unique_id=613886429 instance=ExtResource("4")]
+transform = Transform3D(0.8401684, 0.13989781, -0.523971, -0.12911026, 0.98997366, 0.05729475, 0.5267329, 0.01951281, 0.8498069, 3.0800304, 0.23330688, 12.686485)
+itemName = "torch"
+isStatic = true

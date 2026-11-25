@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ywv7jv6mx4tg"]
+
+[ext_resource type="Script" uid="uid://c2ac56fjnn4yd" path="res://render.gd" id="1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_50xbq"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7yqg7"]
+sky_material = SubResource("ProceduralSkyMaterial_50xbq")
+
+[sub_resource type="Environment" id="Environment_sfvfi"]
+background_mode = 1
+background_color = Color(0, 0, 1, 1)
+sky = SubResource("Sky_7yqg7")
+reflected_light_source = 1
+tonemap_mode = 2
+
+[node name="Node3D" type="Node3D" unique_id=1313769651]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1593812041]
+environment = SubResource("Environment_sfvfi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2088249056]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1134422186]
+transform = Transform3D(0.53352755, 0.17228247, 0.82805026, -0.12438964, 0.9843714, -0.1246599, -0.8365857, -0.03649137, 0.5466194, 4.6764145, 0.35073185, 1.5697564)

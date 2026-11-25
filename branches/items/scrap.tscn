@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bgk2a7tchge75"]
+
+[ext_resource type="Texture2D" uid="uid://1crpd5877nci" path="res://assets/textures/metalplate.png" id="1"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_lln6n"]
+left_to_right = -0.5
+size = Vector3(1, 0.5, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4twn5"]
+albedo_color = Color(0.8592092, 0.32589042, 0.42941684, 1)
+metallic = 1.0
+metallic_specular = 0.65
+metallic_texture = ExtResource("1")
+
+[node name="APP" type="Node3D" unique_id=162567194]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=794019913]
+transform = Transform3D(0.714094, 0, 0, 0, 0.38590682, 0, 0, 0, 0.37280697, 0.14696133, 0, 0)
+mesh = SubResource("PrismMesh_lln6n")
+surface_material_override/0 = SubResource("StandardMaterial3D_4twn5")

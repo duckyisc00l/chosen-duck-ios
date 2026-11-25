@@ -1,0 +1,74 @@
+{
+	"tree" : {
+		"health" : 8,
+		"programmedDrops" : {
+			"0" : ["stick"],
+		  	"1" : ["stick"],
+			"9" : ["log"]
+		},
+		"tool" : "axe",
+	},
+	"stone" : {
+		"health" : 100,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","stone","stone"]
+		},
+		"tool" : "pickaxe",
+	},
+	"coal-ore" : {
+		"health" : 150,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","coal","coal"]
+		},
+		"tool" : "pickaxe",
+	},
+	"iron-ore" : {
+		"health" : 150,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","stone","iron-ingot"]
+		},
+		"tool" : "pickaxe",
+	},
+	"gold-ore" : {
+		"health" : 150,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","stone","stone"]
+		},
+		"tool" : "pickaxe",
+	},
+	"ruby-ore" : {
+		"health" : 200,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","coal","coal"]
+		},
+		"tool" : "pickaxe",
+	},
+	"diamond-ore" : {
+		"health" : 245,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","stone","stone"]
+		},
+		"tool" : "pickaxe",
+	},
+	"harshrock" : {
+		"health" : -1,
+		"programmedDrops" : {
+			"0" : [],
+			"1" : [],
+			"9" : ["stone","stone","stone","stone"]
+		},
+		"tool" : "pickaxe",
+	},
+}

@@ -1,0 +1,34 @@
+{
+	"village" : {
+		"music-enter" : ["village.ogg"],
+		"music-calm" : [],
+		"music-upbeat" : [],
+		"trigger-first" : ["first-dialog-cut"]
+	},
+	"cave" : {
+		"music-enter" : ["the-cave.ogg"],
+		"music-calm" : ["the-cave.ogg"],
+		"music-upbeat" : ["into-the-mineshaft.ogg"],
+		"trigger-first" : [],
+		"dif-light" : "lightingcave"
+	},
+	"snowy-cutscene" : {
+		"music-enter" : [],
+		"music-calm" : [],
+		"music-upbeat" : [],
+		"trigger-first" : ["first-dialog-cut"]
+	},
+	"greenish-field" : {
+		"music-enter" : ["curious-duck.ogg"],
+		"music-calm" : ["curious-duck.ogg"],
+		"music-upbeat" : ["evenifthetreesdontsway.ogg"],
+		"trigger-first" : ["andrew-coming"]
+	},
+	"endless" : {
+		"music-enter" : ["curious-duck.ogg"],
+		"music-calm" : ["curious-duck.ogg"],
+		"music-upbeat" : ["evenifthetreesdontsway.ogg"],
+		"trigger-first" : [],
+		"dif-light" : "lightjustdark"
+	},
+}

@@ -1,0 +1,37 @@
+{
+	"_basic" : {
+		"type-tool" : ["iron-sword"],
+		"type-placeable" : ["torch"],
+		"tools" : {
+			"sword" : {
+				"wooden-sword" : 2,
+				"stone-sword" : 3,
+				"iron-sword" : 5,
+				"golden-sword" : 5,
+				"ruby-sword" : 6,
+				"diamond-sword" : 7,
+			},
+			"pickaxe" : {
+				"wooden-pickaxe" : 8,
+				"stone-pickaxe" : 13,
+				"iron-pickaxe" : 20,
+				"golden-pickaxe" : 20,
+				"ruby-pickaxe" : 27,
+				"diamond-pickaxe" : 35,
+				"darkery-pickaxe" : 50,
+			},
+			"axe" : {
+				"wooden-axe" : 2,
+				"stone-axe" : 3,
+				"iron-axe" : 4,
+				"golden-axe" : 4,
+				"ruby-axe" : 6,
+				"diamond-axe" : 6,
+				"darkery-axe" : 7,
+			}
+		},
+		"has-display" : {
+			"iron-ingot" : "iron ingot",
+		}
+	},
+}

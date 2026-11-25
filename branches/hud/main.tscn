@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://x7hoc85xw41x"]
+
+[ext_resource type="Script" uid="uid://clmotlyy4drsi" path="res://scripts/mainmenu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://64q6kc0bumkv" path="res://assets/splash/logotcd.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bwvklgwesggdg" path="res://assets/fonts/dogica.ttf" id="3"]
+[ext_resource type="Script" uid="uid://chejta7wbo3rt" path="res://scripts/translateChildren00.gd" id="4"]
+[ext_resource type="Script" uid="uid://bvcvwy7co2nrf" path="res://scripts/control_2translate.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://h6u3vvcwhwn2" path="res://branches/hud/options.tscn" id="6"]
+
+[sub_resource type="Animation" id="Animation_y1o0p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.7, 0.7)]
+}
+
+[sub_resource type="Animation" id="Animation_r8yej"]
+resource_name = "logobump"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(0.8605329, 0.8605329), Vector2(0.7, 0.7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3y2rt"]
+_data = {
+&"RESET": SubResource("Animation_y1o0p"),
+&"logobump": SubResource("Animation_r8yej")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_037ec"]
+font = ExtResource("3")
+font_size = 32
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e0arn"]
+font = ExtResource("3")
+font_size = 32
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MAIN" type="Control" unique_id=1287938673]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1")
+
+[node name="LOGO" type="TextureRect" parent="." unique_id=1118113610]
+layout_mode = 0
+offset_top = -32.0
+offset_right = 640.0
+offset_bottom = 328.0
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(320, 180)
+texture = ExtResource("2")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LOGO" unique_id=2017017104]
+libraries/ = SubResource("AnimationLibrary_3y2rt")
+speed_scale = 0.175
+
+[node name="Label" type="Label" parent="LOGO" unique_id=979905029]
+layout_mode = 0
+offset_left = -122.85714
+offset_top = -22.857141
+offset_right = 165.14285
+offset_bottom = 13.1428585
+text = "ver. a0.4"
+label_settings = SubResource("LabelSettings_037ec")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1521019767]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 1261.0
+offset_bottom = 280.0
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="Control" type="Control" parent="." unique_id=500713492]
+z_index = 300
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 40.0
+offset_bottom = 84.0
+script = ExtResource("4")
+
+[node name="play" type="Label" parent="Control" unique_id=1276925229]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 196.0
+offset_right = 531.0
+offset_bottom = 232.0
+text = "campaign"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/play" unique_id=679003257]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="options" type="Label" parent="Control" unique_id=1696709542]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 242.0
+offset_right = 531.0
+offset_bottom = 278.0
+text = "options"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/options" unique_id=948850336]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="gallery" type="Label" parent="Control" unique_id=2133440474]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 288.0
+offset_right = 531.0
+offset_bottom = 324.0
+text = "gallery"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/gallery" unique_id=1066322275]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="arcade" type="Label" parent="Control" unique_id=1124184861]
+layout_mode = 0
+offset_left = 89.13599
+offset_top = 338.0
+offset_right = 532.136
+offset_bottom = 374.0
+text = "arcade mode"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/arcade" unique_id=2099605699]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="Control2" type="Control" parent="." unique_id=1028374272]
+visible = false
+z_index = 300
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 40.0
+offset_bottom = 84.0
+script = ExtResource("5")
+
+[node name="achievements" type="Label" parent="Control2" unique_id=455217790]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 196.0
+offset_right = 531.0
+offset_bottom = 232.0
+text = "achievements"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control2/achievements" unique_id=1965324523]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="index" type="Label" parent="Control2" unique_id=1414844452]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 242.0
+offset_right = 531.0
+offset_bottom = 278.0
+text = "index"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control2/index" unique_id=1025278094]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="visuals" type="Label" parent="Control2" unique_id=778282007]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 288.0
+offset_right = 531.0
+offset_bottom = 324.0
+text = "visuals"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control2/visuals" unique_id=1941986805]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="back" type="Label" parent="Control2" unique_id=1508182290]
+layout_mode = 0
+offset_left = 89.13599
+offset_top = 338.0
+offset_right = 532.136
+offset_bottom = 374.0
+text = "back"
+label_settings = SubResource("LabelSettings_e0arn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control2/back" unique_id=1207649546]
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 41.0
+mouse_filter = 1
+
+[node name="OPTIONS" parent="." unique_id=96949919 instance=ExtResource("6")]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 75.0
+offset_right = 590.136
+offset_bottom = 378.0

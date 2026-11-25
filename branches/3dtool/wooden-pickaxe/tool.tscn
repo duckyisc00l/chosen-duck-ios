@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c8ilx6sf7rmcw"]
+
+[ext_resource type="ArrayMesh" uid="uid://dt3gh7fhmwunq" path="res://assets/rendered/picareta.1.obj" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyc6d"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.4117647, 0.10980392, 0.10980392, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g7b7a"]
+material = SubResource("StandardMaterial3D_gyc6d")
+size = Vector3(2.8, 0.2, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7b7a"]
+albedo_color = Color(0.30528778, 0.1720897, 0.088189535, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qx4q"]
+albedo_color = Color(0.40716445, 0.14854619, 0.041883364, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlb3m"]
+albedo_color = Color(0.28819788, 0.09799186, 0.07533877, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1326004211]
+mesh = SubResource("BoxMesh_g7b7a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696251249]
+transform = Transform3D(-1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 0, 0, 3, 6.773963, 0.9984546, 0)
+mesh = ExtResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_g7b7a")
+surface_material_override/1 = SubResource("StandardMaterial3D_6qx4q")
+surface_material_override/2 = SubResource("StandardMaterial3D_nlb3m")

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bcc210678gpai"]
+
+[ext_resource type="Script" uid="uid://dxdqbscethx5t" path="res://scripts/item0.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://gmvxd8bt6t2s" path="res://assets/textures/duckshadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bedc3ivftmhnw" path="res://assets/hud/icons/A.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://dh3ny0nbqwa6f" path="res://assets/sound/sfx/pop.ogg" id="4"]
+[ext_resource type="PackedScene" uid="uid://dl85enclk73x3" path="res://branches/items/shiny-stone.tscn" id="5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xpy7m"]
+radius = 0.09082031
+height = 1.1022644
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=613886429]
+collision_layer = 2
+collision_mask = 129
+collision_priority = 0.116
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752911073]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.01109314, -0.03656006, 0)
+shape = SubResource("CapsuleShape3D_xpy7m")
+debug_color = Color(0.7529412, 0.45882353, 0, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1209770946]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, -0.5753357, 0)
+top_level = true
+modulate = Color(1, 1, 1, 0.7176471)
+texture_filter = 2
+texture = ExtResource("2")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2031293876]
+top_level = true
+target_position = Vector3(0, -80, 0)
+collision_mask = 129
+
+[node name="billboard" type="Sprite3D" parent="." unique_id=1012845176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+top_level = true
+visible = false
+pixel_size = 0.03
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3")
+
+[node name="SOUND" type="Node3D" parent="." unique_id=247650693]
+
+[node name="SPAWN" type="AudioStreamPlayer3D" parent="SOUND" unique_id=371801550]
+stream = ExtResource("4")
+volume_db = -10.0
+autoplay = true
+
+[node name="APP" parent="." unique_id=78478634 instance=ExtResource("5")]

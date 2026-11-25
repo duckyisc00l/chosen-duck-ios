@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dl85enclk73x3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vvcwg"]
+radius = 0.25
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtx34"]
+shading_mode = 0
+albedo_color = Color(0, 1, 1, 1)
+
+[node name="APP" type="Node3D" unique_id=78478634]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=190071767]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_vvcwg")
+surface_material_override/0 = SubResource("StandardMaterial3D_wtx34")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=48212672]
+light_color = Color(0, 1, 1, 1)
+omni_range = 3.0
+omni_attenuation = 2.0

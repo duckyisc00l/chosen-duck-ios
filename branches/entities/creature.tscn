@@ -1,0 +1,294 @@
+[gd_scene format=3 uid="uid://b8hvt6ggnwelp"]
+
+[ext_resource type="Script" uid="uid://dgdxgm3j2b7k5" path="res://scripts/creature1.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cfqrsux541gwp" path="res://branches/3dchar/slithe/char.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://gmvxd8bt6t2s" path="res://assets/textures/duckshadow.png" id="3"]
+[ext_resource type="FontFile" uid="uid://bwvklgwesggdg" path="res://assets/fonts/dogica.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://12trgnlcp6n5" path="res://assets/iconsAtlas/x.tres" id="5"]
+[ext_resource type="AudioStream" uid="uid://cn4fsiplygugh" path="res://assets/sound/sfx/combat/swing.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://cl2544cfs2u0v" path="res://assets/sound/sfx/creatures/anserin/quack_damage_w_slap.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://wqkyf00vf11o" path="res://assets/sound/sfx/creatures/slithe/acc_slithe.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://bxmxrmn8hl5tv" path="res://assets/sound/sfx/creatures/slimer/squishslimer.ogg" id="9"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ix6ec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dd4cj"]
+size = Vector3(1.5073242, 0.5142212, 0.53040314)
+
+[sub_resource type="Animation" id="Animation_dd4cj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../duck1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../duck1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.3, 0.3, 0.3)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SOUND/COMBAT_BOUNCE:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_m648m"]
+resource_name = "jump"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../duck1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.2), Vector3(0, 0.3484223, 0.2), Vector3(0, 0, 0.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../duck1:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.3, 0.3, 0.3), Vector3(0.36122578, 0.33622506, 0.3), Vector3(0.369652, 0.251331, 0.3), Vector3(0.3, 0.3, 0.3)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SOUND/COMBAT_BOUNCE:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_382nq"]
+_data = {
+&"RESET": SubResource("Animation_dd4cj"),
+&"jump": SubResource("Animation_m648m")
+}
+
+[sub_resource type="Curve" id="Curve_dd4cj"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.9665271, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m648m"]
+curve = SubResource("Curve_dd4cj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ip03m"]
+angle_curve = SubResource("CurveTexture_m648m")
+direction = Vector3(0, 0, -5)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -40, 0)
+linear_accel_min = 3.9999976
+linear_accel_max = 3.9999976
+scale_min = 0.39999998
+scale_max = 0.39999998
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 1.0
+collision_use_scale = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bo2p"]
+shading_mode = 0
+albedo_color = Color(0.37161034, 0.9724372, 0.52798575, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cujc"]
+material = SubResource("StandardMaterial3D_1bo2p")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_sp84q"]
+_data = [Vector2(0, 0.7191012), 0.0, 0.0, 0, 0, Vector2(0.505618, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_31vc3"]
+curve = SubResource("Curve_sp84q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_owjj2"]
+direction = Vector3(1, 0, 0.2)
+initial_velocity_min = -20.0
+initial_velocity_max = 20.0
+linear_accel_min = 3.9999976
+linear_accel_max = 3.9999976
+scale_curve = SubResource("CurveTexture_31vc3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v775f"]
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_g3bmv"]
+material = SubResource("StandardMaterial3D_v775f")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dd4cj"]
+radius = 2.204
+
+[sub_resource type="BoxMesh" id="BoxMesh_sp84q"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owjj2"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 0.3019608)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g3bmv"]
+radius = 3.6966398
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1534377990]
+collision_mask = 192
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=977697434]
+shape = SubResource("BoxShape3D_ix6ec")
+
+[node name="duck1" parent="." unique_id=1013674732 instance=ExtResource("2")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, 0, 0, 0.2)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=766597659]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, -0.5753357, 0)
+modulate = Color(1, 1, 1, 0.7176471)
+texture_filter = 2
+texture = ExtResource("3")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1719226079]
+target_position = Vector3(0, -80, 0)
+collision_mask = 128
+
+[node name="RaycastStun" type="RayCast3D" parent="." unique_id=1029867686]
+target_position = Vector3(0, -0.7, 0)
+collision_mask = 129
+
+[node name="PIVOTHITBOX" type="Node3D" parent="." unique_id=810749146]
+
+[node name="HITBOX" type="Area3D" parent="PIVOTHITBOX" unique_id=1353921792]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PIVOTHITBOX/HITBOX" unique_id=1266569053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049072266, 0.056488037, 0.73114395)
+shape = SubResource("BoxShape3D_dd4cj")
+debug_color = Color(0.9764753, 0, 0.41516653, 0.41960785)
+
+[node name="ANIMS" type="Node3D" parent="." unique_id=943094897]
+
+[node name="jump" type="AnimationPlayer" parent="ANIMS" unique_id=240795885]
+libraries/ = SubResource("AnimationLibrary_382nq")
+
+[node name="bounce_slime" type="AnimationPlayer" parent="ANIMS" unique_id=993664683]
+libraries/ = SubResource("AnimationLibrary_382nq")
+
+[node name="FX" type="Node3D" parent="." unique_id=459378841]
+
+[node name="GooGush" type="GPUParticles3D" parent="FX" unique_id=1807102451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2924863, -0.50951624)
+emitting = false
+lifetime = 2.0
+interp_to_end = 0.03
+one_shot = true
+explosiveness = 1.0
+collision_base_size = 1.0
+process_material = SubResource("ParticleProcessMaterial_ip03m")
+draw_pass_1 = SubResource("BoxMesh_6cujc")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="FX" unique_id=1768041705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8469423, 0)
+emitting = false
+lifetime = 0.7
+interp_to_end = 0.03
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_owjj2")
+draw_pass_1 = SubResource("BoxMesh_g3bmv")
+
+[node name="SleepingZzz" type="Label3D" parent="FX" unique_id=1610899116]
+transform = Transform3D(0.9744877, 0.22444084, 0, -0.22444084, 0.9744877, 0, 0, 0, 1, 1.0934393, 1.0013456, 0)
+visible = false
+billboard = 1
+modulate = Color(0.54350376, 0.42855036, 1, 1)
+text = "Zzz"
+font = ExtResource("4")
+font_size = 77
+outline_size = 24
+
+[node name="Ainteract" type="Sprite3D" parent="FX" unique_id=1863692873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3809247, 0.2805854)
+visible = false
+pixel_size = 0.04
+billboard = 1
+texture_filter = 0
+texture = ExtResource("5")
+
+[node name="COLLECTBOX" type="Area3D" parent="." unique_id=1222715441]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="COLLECTBOX" unique_id=1629362358]
+shape = SubResource("SphereShape3D_dd4cj")
+debug_color = Color(0.65729076, 0.32279944, 1, 0.41960785)
+
+[node name="HB" type="MeshInstance3D" parent="." unique_id=872628871]
+visible = false
+mesh = SubResource("BoxMesh_sp84q")
+surface_material_override/0 = SubResource("StandardMaterial3D_owjj2")
+
+[node name="SOUND" type="Node3D" parent="." unique_id=1405358598]
+
+[node name="COMBAT_SWING" type="AudioStreamPlayer3D" parent="SOUND" unique_id=473916595]
+stream = ExtResource("6")
+volume_db = -3.0
+
+[node name="LIVING_HIT" type="AudioStreamPlayer3D" parent="SOUND" unique_id=1152182854]
+stream = ExtResource("7")
+volume_db = -3.0
+
+[node name="LIVING_DEFAULT" type="AudioStreamPlayer3D" parent="SOUND" unique_id=1370222280]
+stream = ExtResource("7")
+volume_db = -10.0
+
+[node name="COMBAT_ACC" type="AudioStreamPlayer3D" parent="SOUND" unique_id=1088610727]
+stream = ExtResource("8")
+volume_db = -10.0
+
+[node name="COMBAT_BOUNCE" type="AudioStreamPlayer3D" parent="SOUND" unique_id=316609164]
+stream = ExtResource("9")
+volume_db = -10.0
+
+[node name="DETECTIONBOX" type="Area3D" parent="." unique_id=1371114296]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DETECTIONBOX" unique_id=1654990487]
+shape = SubResource("SphereShape3D_g3bmv")
+debug_color = Color(0.99999994, 0, 0.109097965, 0.41960785)
+
+[connection signal="tookDamage" from="." to="." method="_on_took_damage"]
+[connection signal="body_entered" from="COLLECTBOX" to="." method="_on_collectbox_body_entered"]
+[connection signal="body_exited" from="COLLECTBOX" to="." method="_on_collectbox_body_exited"]
+[connection signal="body_entered" from="DETECTIONBOX" to="." method="_on_detectionbox_body_entered"]

@@ -1,0 +1,67 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c8v7at0x0xr3r"
+path="res://.godot/imported/goggles.fbx-71efb8d1c81d43cb1ea559de4d757347.scn"
+
+[deps]
+
+source_file="res://assets/rendered/goggles.fbx"
+dest_files=["res://.godot/imported/goggles.fbx-71efb8d1c81d43cb1ea559de4d757347.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="goggles"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"Cube_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"Cube_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Camera": {
+"node/node_type": "Camera3D"
+},
+"PATH:Light": {
+"node/node_type": "OmniLight3D"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

@@ -1,0 +1,530 @@
+[gd_scene format=3 uid="uid://h6u3vvcwhwn2"]
+
+[ext_resource type="Script" uid="uid://caed107flsthw" path="res://scripts/options.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://bwvklgwesggdg" path="res://assets/fonts/dogica.ttf" id="2"]
+[ext_resource type="Texture2D" uid="uid://l1x8oe1i6pjs" path="res://assets/hud/buttons/buttongp_ui.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dlvciogu4ihf6" path="res://assets/hud/buttons/shoulder.png" id="4"]
+[ext_resource type="Script" uid="uid://dxh20y1oo4n5y" path="res://scripts/opt.gd" id="5"]
+[ext_resource type="Script" uid="uid://d3jqkb4q84w70" path="res://scripts/menus/crt.gd" id="6"]
+[ext_resource type="Script" uid="uid://r4gf67x4l6b3" path="res://scripts/menus/fs.gd" id="7"]
+[ext_resource type="Script" uid="uid://cqrruv4k2tm80" path="res://scripts/menus/lyt.gd" id="8"]
+[ext_resource type="Script" uid="uid://jm8dxbrefl3o" path="res://scripts/menus/eng.gd" id="9"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k48pe"]
+font = ExtResource("2")
+font_size = 24
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4i1bo"]
+font = ExtResource("2")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rcuxh"]
+font = ExtResource("2")
+font_size = 24
+font_color = Color(1, 1, 1, 0.6627451)
+outline_size = 10
+outline_color = Color(0, 0, 0, 0.47058824)
+
+[sub_resource type="LabelSettings" id="LabelSettings_64m6r"]
+font = ExtResource("2")
+font_size = 24
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_d31jh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10.000016, 10.666668)]
+}
+
+[sub_resource type="Animation" id="Animation_hyy6o"]
+resource_name = "lb"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.082471795),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.000016, 8.000001), Vector2(10.000016, 10.666668)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pjdsv"]
+_data = {
+&"RESET": SubResource("Animation_d31jh"),
+&"lb": SubResource("Animation_hyy6o")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjdsv"]
+font = ExtResource("2")
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="OPTIONS" type="ColorRect" unique_id=96949919]
+visible = false
+z_index = 900
+offset_left = 179.0
+offset_top = 109.0
+offset_right = 584.136
+offset_bottom = 412.0
+color = Color(0.28627452, 0.28627452, 0.28627452, 0.61960787)
+script = ExtResource("1")
+
+[node name="blackout" type="ColorRect" parent="." unique_id=1743722240]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -320.0
+offset_top = -176.0
+offset_right = 704.0
+offset_bottom = 524.0
+color = Color(0, 0, 0, 1)
+
+[node name="opt_video" type="ColorRect" parent="." unique_id=1031465437]
+z_index = 2323
+layout_mode = 0
+offset_left = -153.0
+offset_right = -7.1359863
+offset_bottom = 49.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="opt_video" unique_id=1394234691]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 47.0
+text = "video"
+label_settings = SubResource("LabelSettings_k48pe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="opt_video" unique_id=1652533947]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="opt_audio" type="ColorRect" parent="." unique_id=1395505968]
+z_index = 2323
+layout_mode = 0
+offset_left = -153.0
+offset_top = 57.0
+offset_right = -7.1359863
+offset_bottom = 106.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="opt_audio" unique_id=1251782339]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 47.0
+text = "audio"
+label_settings = SubResource("LabelSettings_k48pe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="opt_audio" unique_id=2125476800]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="opt_gamepad" type="ColorRect" parent="." unique_id=1720536408]
+z_index = 2323
+layout_mode = 0
+offset_left = -153.0
+offset_top = 117.0
+offset_right = -7.1359863
+offset_bottom = 166.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="opt_gamepad" unique_id=310252808]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 47.0
+text = "gamepd"
+label_settings = SubResource("LabelSettings_k48pe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="opt_gamepad" unique_id=2007808662]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="opt_keyboard" type="ColorRect" parent="." unique_id=732191267]
+z_index = 2323
+layout_mode = 0
+offset_left = -153.0
+offset_top = 178.0
+offset_right = -7.1359863
+offset_bottom = 227.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="opt_keyboard" unique_id=1588941921]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 47.0
+text = "keybrd"
+label_settings = SubResource("LabelSettings_k48pe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="opt_keyboard" unique_id=645166827]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="opt_lang" type="ColorRect" parent="." unique_id=1135672846]
+z_index = 2323
+layout_mode = 0
+offset_left = -153.0
+offset_top = 241.0
+offset_right = -7.1359863
+offset_bottom = 290.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="opt_lang" unique_id=618059559]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 47.0
+text = "lang"
+label_settings = SubResource("LabelSettings_k48pe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="opt_lang" unique_id=1668303565]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="leave" type="ColorRect" parent="." unique_id=2131584043]
+z_index = 2323
+layout_mode = 0
+offset_left = 128.0
+offset_top = 307.0
+offset_right = 273.864
+offset_bottom = 343.0
+color = Color(0.15127608, 0.15127608, 0.15127608, 0.61960787)
+
+[node name="play" type="Label" parent="leave" unique_id=348963284]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 37.0
+text = "leave"
+label_settings = SubResource("LabelSettings_4i1bo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="leave" unique_id=749377904]
+modulate = Color(1, 1, 1, 0)
+z_index = 2323
+layout_mode = 0
+offset_right = 147.0
+offset_bottom = 51.0
+
+[node name="GAMEPADCFRM" type="Control" parent="." unique_id=1589871374]
+visible = false
+anchors_preset = 0
+offset_left = -109.0
+offset_top = 301.0
+offset_right = -69.0
+offset_bottom = 341.0
+
+[node name="label" type="Label" parent="GAMEPADCFRM" unique_id=3685304]
+layout_mode = 0
+offset_left = 110.86401
+offset_top = 17.0
+offset_right = 518.864
+offset_bottom = 45.0
+scale = Vector2(0.75, 0.75)
+text = "hit    to leave"
+label_settings = SubResource("LabelSettings_rcuxh")
+
+[node name="TextureRect" type="TextureRect" parent="GAMEPADCFRM" unique_id=480683632]
+modulate = Color(1, 1, 1, 0.60784316)
+self_modulate = Color(0.85646826, 0.00021098115, 0.0001150325, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 182.0
+offset_top = 5.0
+offset_right = 222.0
+offset_bottom = 45.0
+texture = ExtResource("3")
+
+[node name="label" type="Label" parent="GAMEPADCFRM/TextureRect" unique_id=450926350]
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.3333235
+offset_top = 12.000001
+offset_right = 35.333324
+offset_bottom = 33.0
+scale = Vector2(0.75, 0.75)
+text = "B"
+label_settings = SubResource("LabelSettings_64m6r")
+
+[node name="GP_SHOULDERS" type="Control" parent="GAMEPADCFRM" unique_id=365648602]
+anchors_preset = 0
+offset_left = 83.0
+offset_top = -360.0
+offset_right = 123.0
+offset_bottom = -320.0
+scale = Vector2(0.5, 0.5)
+
+[node name="L" type="TextureRect" parent="GAMEPADCFRM/GP_SHOULDERS" unique_id=1029985754]
+modulate = Color(1, 1, 1, 0.60784316)
+texture_filter = 1
+layout_mode = 0
+offset_left = -268.0
+offset_top = 54.0
+offset_right = -204.0
+offset_bottom = 94.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4")
+flip_h = true
+
+[node name="Control" type="Control" parent="GAMEPADCFRM/GP_SHOULDERS/L" unique_id=1373734670]
+anchors_preset = 0
+offset_left = 12.0
+offset_right = 52.0
+offset_bottom = 40.0
+
+[node name="label" type="Label" parent="GAMEPADCFRM/GP_SHOULDERS/L/Control" unique_id=783140209]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.000016
+offset_top = 10.666668
+offset_right = 58.000015
+offset_bottom = 31.703678
+scale = Vector2(0.75, 0.75)
+text = "LB"
+label_settings = SubResource("LabelSettings_64m6r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GAMEPADCFRM/GP_SHOULDERS/L/Control/label" unique_id=1035549172]
+libraries/ = SubResource("AnimationLibrary_pjdsv")
+
+[node name="R" type="TextureRect" parent="GAMEPADCFRM/GP_SHOULDERS" unique_id=1066447446]
+modulate = Color(1, 1, 1, 0.60784316)
+texture_filter = 1
+layout_mode = 0
+offset_left = -46.0
+offset_top = 54.0
+offset_right = 18.0
+offset_bottom = 94.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4")
+
+[node name="Control" type="Control" parent="GAMEPADCFRM/GP_SHOULDERS/R" unique_id=341848550]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="label" type="Label" parent="GAMEPADCFRM/GP_SHOULDERS/R/Control" unique_id=776467003]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.000016
+offset_top = 10.666668
+offset_right = 58.000015
+offset_bottom = 31.703678
+scale = Vector2(0.75, 0.75)
+text = "RB"
+label_settings = SubResource("LabelSettings_64m6r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GAMEPADCFRM/GP_SHOULDERS/R/Control/label" unique_id=1280826375]
+libraries/ = SubResource("AnimationLibrary_pjdsv")
+
+[node name="MENUS" type="Control" parent="." unique_id=1857354517]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="opt_video" type="Control" parent="MENUS" unique_id=1501123340 node_paths=PackedStringArray("selected")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5")
+selected = NodePath("crt")
+
+[node name="crt" type="Label" parent="MENUS/opt_video" unique_id=1751250890]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 406.0
+offset_bottom = 39.0
+text = "CRT filter -- on"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6")
+
+[node name="Button" type="Button" parent="MENUS/opt_video/crt" unique_id=2023806591]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0
+
+[node name="fs" type="Label" parent="MENUS/opt_video" unique_id=49941427]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 37.0
+offset_right = 406.0
+offset_bottom = 73.0
+text = "full screen -- on"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7")
+
+[node name="Button" type="Button" parent="MENUS/opt_video/fs" unique_id=532710580]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0
+
+[node name="opt_audio" type="Control" parent="MENUS" unique_id=1340634831]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="opt_gamepad" type="Control" parent="MENUS" unique_id=54356822 node_paths=PackedStringArray("selected")]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5")
+selected = NodePath("lyt")
+
+[node name="lyt" type="Label" parent="MENUS/opt_gamepad" unique_id=2126198680]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 406.0
+offset_bottom = 39.0
+text = "layout -- xb"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8")
+
+[node name="Button" type="Button" parent="MENUS/opt_gamepad/lyt" unique_id=977049270]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0
+
+[node name="opt_keyboard" type="Control" parent="MENUS" unique_id=401847339]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="opt_lang" type="Control" parent="MENUS" unique_id=725560514 node_paths=PackedStringArray("selected")]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5")
+selected = NodePath("eng")
+
+[node name="eng" type="Label" parent="MENUS/opt_lang" unique_id=657902741]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 406.0
+offset_bottom = 39.0
+text = "lang. ENG -- off"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9")
+lang = "eng"
+
+[node name="Button" type="Button" parent="MENUS/opt_lang/eng" unique_id=629676476]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0
+
+[node name="rus" type="Label" parent="MENUS/opt_lang" unique_id=954199719]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 81.0
+offset_right = 406.0
+offset_bottom = 117.0
+text = "lang. RUS -- off"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9")
+lang = "rus"
+
+[node name="Button" type="Button" parent="MENUS/opt_lang/rus" unique_id=1729561773]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0
+
+[node name="pt-br" type="Label" parent="MENUS/opt_lang" unique_id=996448004]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 40.0
+offset_right = 406.0
+offset_bottom = 76.0
+text = "lang. PT-BR -- off"
+label_settings = SubResource("LabelSettings_pjdsv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9")
+lang = "pt-br"
+
+[node name="Button" type="Button" parent="MENUS/opt_lang/pt-br" unique_id=561316111]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 32.0

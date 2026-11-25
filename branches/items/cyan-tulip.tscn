@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cntdc5p6e7jtt"]
+
+[ext_resource type="ArrayMesh" uid="uid://bs3vxx6715uk1" path="res://assets/rendered/flor.3.obj" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2i24"]
+albedo_color = Color(0.08991737, 0.6478398, 1.1551381e-06, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4j5k"]
+albedo_color = Color(0.58145124, 0.80166644, 0.89992183, 1)
+
+[node name="APP" type="Node3D" unique_id=1365233014]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681696387]
+transform = Transform3D(0.106, 0, 0, 0, 0.106, 0, 0, 0, 0.106, 0.012997508, 0.19490403, -0.035071433)
+mesh = ExtResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_m2i24")
+surface_material_override/1 = SubResource("StandardMaterial3D_m2i24")
+surface_material_override/2 = SubResource("StandardMaterial3D_t4j5k")
+surface_material_override/3 = SubResource("StandardMaterial3D_m2i24")
+surface_material_override/4 = SubResource("StandardMaterial3D_m2i24")
+surface_material_override/5 = SubResource("StandardMaterial3D_t4j5k")
+surface_material_override/6 = SubResource("StandardMaterial3D_m2i24")

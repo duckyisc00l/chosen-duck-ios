@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dv6fuv32r0nlp"]
+
+[ext_resource type="ArrayMesh" uid="uid://bf76sti384kqu" path="res://assets/rendered/flor.1.obj" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7b7a"]
+albedo_color = Color(0.19948888, 0.4759478, 0.23515207, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyc6d"]
+albedo_color = Color(0.23578948, 0.41653666, 0.20432633, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qx4q"]
+albedo_color = Color(0.8738002, 0.91091645, 0.90084857, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqkgv"]
+albedo_color = Color(0.22806191, 0.6268996, 0.33422026, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpo87"]
+albedo_color = Color(0.7092704, 0.71678215, 0.18069595, 1)
+
+[node name="APP" type="Node3D" unique_id=1365233014]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681696387]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.09879267, -0.33538926, 0)
+mesh = ExtResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_g7b7a")
+surface_material_override/1 = SubResource("StandardMaterial3D_gyc6d")
+surface_material_override/2 = SubResource("StandardMaterial3D_6qx4q")
+surface_material_override/3 = SubResource("StandardMaterial3D_hqkgv")
+surface_material_override/4 = SubResource("StandardMaterial3D_bpo87")

@@ -1,0 +1,29 @@
+{
+	"_order" : {
+	"default" : ["stick","iron-ingot","wooden-sword","wooden-pickaxe","torch"]
+	},
+	"stick" : {
+		"uses" : ["log"],
+		"gives" : ["stick","stick","stick"],
+		"class" : "material"
+	},
+	"iron-ingot" : {
+		"uses" : ["scrap","scrap","scrap","scrap","scrap","scrap","scrap","scrap","scrap","scrap"],
+		"gives" : ["iron-ingot"],
+		"class" : "material"
+	},
+	"wooden-sword" : {
+		"uses" : ["stick","stick","stick","stick"],
+		"gives" : ["wooden-sword"],
+		"class" : "sword"
+	},
+	"wooden-pickaxe" : {
+		"uses" : ["stick","stick","stick","stick"],
+		"gives" : ["wooden-pickaxe"],
+		"class" : "pickaxe"
+	},
+	"torch" : {
+		"uses" : ["stick","coal"],
+		"gives" : ["PLACE"],
+	}
+}

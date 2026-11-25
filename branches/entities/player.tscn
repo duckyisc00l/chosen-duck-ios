@@ -1,0 +1,251 @@
+[gd_scene format=3 uid="uid://c16o7kcr0xp63"]
+
+[ext_resource type="Script" uid="uid://dwui2c2eis0es" path="res://branches/entities/player0.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cfqrsux541gwp" path="res://branches/3dchar/slithe/char.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://gmvxd8bt6t2s" path="res://assets/textures/duckshadow.png" id="3"]
+[ext_resource type="FontFile" uid="uid://bwvklgwesggdg" path="res://assets/fonts/dogica.ttf" id="4"]
+[ext_resource type="Script" uid="uid://c82fdx2gisgam" path="res://addons/CameraShake3D/CameraShake3D/CameraShake3DNode.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://cn4fsiplygugh" path="res://assets/sound/sfx/combat/swing.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://cl2544cfs2u0v" path="res://assets/sound/sfx/creatures/anserin/quack_damage_w_slap.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://8jrmi6724qti" path="res://assets/sound/sfx/grab.ogg" id="8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ix6ec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dd4cj"]
+size = Vector3(1.5073242, 0.5142212, 0.53040314)
+
+[sub_resource type="Animation" id="Animation_dd4cj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../duck1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../duck1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.3, 0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_m648m"]
+resource_name = "jump"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../duck1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.2), Vector3(0, 0.3484223, 0.2), Vector3(0, 0, 0.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../duck1:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.3, 0.3, 0.3), Vector3(0.36122578, 0.33622506, 0.3), Vector3(0.369652, 0.251331, 0.3), Vector3(0.3, 0.3, 0.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_382nq"]
+_data = {
+&"RESET": SubResource("Animation_dd4cj"),
+&"jump": SubResource("Animation_m648m")
+}
+
+[sub_resource type="Curve" id="Curve_dd4cj"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.9665271, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m648m"]
+curve = SubResource("Curve_dd4cj")
+
+[sub_resource type="Curve" id="Curve_382nq"]
+_data = [Vector2(0, 0.7191012), 0.0, 0.0, 0, 0, Vector2(0.505618, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mb7jf"]
+curve = SubResource("Curve_382nq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ip03m"]
+angle_curve = SubResource("CurveTexture_m648m")
+direction = Vector3(0, 0, -5)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -40, 0)
+linear_accel_min = 3.9999976
+linear_accel_max = 3.9999976
+scale_min = 0.39999998
+scale_max = 0.39999998
+scale_curve = SubResource("CurveTexture_mb7jf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bo2p"]
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cujc"]
+material = SubResource("StandardMaterial3D_1bo2p")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_m648m"]
+_data = [Vector2(0, 0.7191012), 0.0, 0.0, 0, 0, Vector2(0.505618, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_31vc3"]
+curve = SubResource("Curve_m648m")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_382nq"]
+direction = Vector3(1, 0, 0.2)
+initial_velocity_min = -20.0
+initial_velocity_max = 20.0
+linear_accel_min = 3.9999976
+linear_accel_max = 3.9999976
+scale_curve = SubResource("CurveTexture_31vc3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v775f"]
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mb7jf"]
+material = SubResource("StandardMaterial3D_v775f")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dd4cj"]
+radius = 2.204
+
+[sub_resource type="BoxMesh" id="BoxMesh_dd4cj"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m648m"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 0.3019608)
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1534377990]
+collision_mask = 192
+script = ExtResource("1")
+isPlayer = true
+creatureType = "player"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=977697434]
+shape = SubResource("BoxShape3D_ix6ec")
+
+[node name="duck1" parent="." unique_id=1013674732 instance=ExtResource("2")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, 0, 0, 0.2)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=766597659]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, -0.5753357, 0)
+modulate = Color(1, 1, 1, 0.7176471)
+texture_filter = 2
+texture = ExtResource("3")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1719226079]
+target_position = Vector3(0, -80, 0)
+collision_mask = 128
+
+[node name="PIVOTHITBOX" type="Node3D" parent="." unique_id=810749146]
+
+[node name="HITBOX" type="Area3D" parent="PIVOTHITBOX" unique_id=1353921792]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PIVOTHITBOX/HITBOX" unique_id=1266569053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049072266, 0.056488037, 0.73114395)
+shape = SubResource("BoxShape3D_dd4cj")
+debug_color = Color(0.9764753, 0, 0.41516653, 0.41960785)
+
+[node name="ANIMS" type="Node3D" parent="." unique_id=943094897]
+
+[node name="jump" type="AnimationPlayer" parent="ANIMS" unique_id=240795885]
+libraries/ = SubResource("AnimationLibrary_382nq")
+
+[node name="FX" type="Node3D" parent="." unique_id=459378841]
+
+[node name="SprintDECCELERATE" type="GPUParticles3D" parent="FX" unique_id=1807102451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2924863, -0.50951624)
+emitting = false
+lifetime = 0.7
+interp_to_end = 0.03
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ip03m")
+draw_pass_1 = SubResource("BoxMesh_6cujc")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="FX" unique_id=1328364535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8469423, 0)
+emitting = false
+lifetime = 0.7
+interp_to_end = 0.03
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_382nq")
+draw_pass_1 = SubResource("BoxMesh_mb7jf")
+
+[node name="SleepingZzz" type="Label3D" parent="FX" unique_id=494601282]
+transform = Transform3D(0.9744877, 0.22444084, 0, -0.22444084, 0.9744877, 0, 0, 0, 1, 1.0934393, 1.0013456, 0)
+visible = false
+billboard = 1
+modulate = Color(0.54350376, 0.42855036, 1, 1)
+text = "Zzz"
+font = ExtResource("4")
+font_size = 77
+outline_size = 24
+
+[node name="COLLECTBOX" type="Area3D" parent="." unique_id=1222715441]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="COLLECTBOX" unique_id=1629362358]
+shape = SubResource("SphereShape3D_dd4cj")
+debug_color = Color(0.65729076, 0.32279944, 1, 0.41960785)
+
+[node name="HB" type="MeshInstance3D" parent="." unique_id=1176675251]
+visible = false
+mesh = SubResource("BoxMesh_dd4cj")
+surface_material_override/0 = SubResource("StandardMaterial3D_m648m")
+
+[node name="CamPivot" type="Node3D" parent="." unique_id=1193972418]
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="CamPivot" unique_id=1651024509]
+
+[node name="CameraShake3DNode" type="Node" parent="CamPivot/Camera3D" unique_id=1182456147 node_paths=PackedStringArray("camera")]
+script = ExtResource("5")
+camera = NodePath("..")
+metadata/_custom_type_script = "uid://c82fdx2gisgam"
+
+[node name="SOUND" type="Node3D" parent="." unique_id=1449376228]
+
+[node name="COMBAT_SWING" type="AudioStreamPlayer3D" parent="SOUND" unique_id=1102853140]
+stream = ExtResource("6")
+volume_db = -3.0
+
+[node name="LIVING_HIT" type="AudioStreamPlayer3D" parent="SOUND" unique_id=903908912]
+stream = ExtResource("7")
+volume_db = -3.0
+
+[node name="GRAB" type="AudioStreamPlayer3D" parent="SOUND" unique_id=482107146]
+stream = ExtResource("8")
+
+[connection signal="tookDamage" from="." to="." method="_on_took_damage"]
+[connection signal="body_entered" from="COLLECTBOX" to="." method="_on_collectbox_body_entered"]
+[connection signal="body_exited" from="COLLECTBOX" to="." method="_on_collectbox_body_exited"]

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://d1r2715p0d3vu"]
+
+[ext_resource type="Texture2D" uid="uid://72x12cor2xma" path="res://assets/textures/Grass2.png" id="1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j0624"]
+size = Vector3(50, 0.2, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdm2k"]
+albedo_texture = ExtResource("1")
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.14406255, 0.14406255, 0.14406255, 1)
+uv1_scale = Vector3(1.33, 1.33, 1.33)
+uv1_triplanar = true
+uv2_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7lbti"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rgpwj"]
+size = Vector3(50, 18.89685, 1.7324336)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cevbl"]
+size = Vector3(51.492615, 18.89685, 1.7324336)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=552473186]
+collision_layer = 128
+collision_mask = 128
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2014266876]
+mesh = SubResource("BoxMesh_j0624")
+surface_material_override/0 = SubResource("StandardMaterial3D_tdm2k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1534912773]
+shape = SubResource("BoxShape3D_7lbti")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=664064306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.948425, 25.865217)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1553708255]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 8.948, 0)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1534339568]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25, 8.948, 0)
+shape = SubResource("BoxShape3D_rgpwj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=714123854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7463074, 8.948, -25)
+shape = SubResource("BoxShape3D_cevbl")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=1083969825]
+size = Vector3(50, 1, 50)

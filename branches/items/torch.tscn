@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://crj5702gop013"]
+
+[ext_resource type="Texture2D" uid="uid://me2dc5rdlqmn" path="res://assets/textures/tronco.png" id="1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rbeqo"]
+size = Vector3(0.5, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1frv"]
+albedo_texture = ExtResource("1")
+
+[sub_resource type="BoxMesh" id="BoxMesh_glhn5"]
+size = Vector3(0.1, 0.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv6f3"]
+albedo_color = Color(0.2574047, 0.25740474, 0.25740474, 1)
+
+[sub_resource type="Curve" id="Curve_4nggj"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k78nn"]
+curve = SubResource("Curve_4nggj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g7b7a"]
+angle_min = -169.09999
+angle_max = 163.20001
+gravity = Vector3(0, 3, 0)
+radial_accel_min = 4.9999976
+radial_accel_max = 9.999997
+scale_curve = SubResource("CurveTexture_k78nn")
+turbulence_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqkgv"]
+shading_mode = 0
+albedo_color = Color(1, 0.30980393, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gyc6d"]
+material = SubResource("StandardMaterial3D_hqkgv")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvbrt"]
+shading_mode = 0
+albedo_color = Color(0.9178595, 0, 0.08818004, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ae4je"]
+material = SubResource("StandardMaterial3D_qvbrt")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6q6y"]
+shading_mode = 0
+albedo_color = Color(1, 0.69175935, 0.29543257, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_73sb4"]
+material = SubResource("StandardMaterial3D_t6q6y")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="APP" type="Node3D" unique_id=1365233014]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681696387]
+transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_rbeqo")
+surface_material_override/0 = SubResource("StandardMaterial3D_i1frv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1420629471]
+transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, 0, 0.2209878, 0)
+mesh = SubResource("BoxMesh_glhn5")
+surface_material_override/0 = SubResource("StandardMaterial3D_jv6f3")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=445261851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_gyc6d")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="." unique_id=1152698754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_ae4je")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="." unique_id=821295357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_73sb4")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="." unique_id=92926033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.093857765, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_gyc6d")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="." unique_id=1301091416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.093857765, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_ae4je")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="." unique_id=766809200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.093857765, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_73sb4")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="." unique_id=738426377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.092790246, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_gyc6d")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="." unique_id=850618677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.092790246, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_ae4je")
+
+[node name="GPUParticles3D9" type="GPUParticles3D" parent="." unique_id=1632245924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.092790246, 0.30331957, 0)
+lifetime = 0.4
+randomness = 0.35
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+draw_pass_1 = SubResource("BoxMesh_73sb4")

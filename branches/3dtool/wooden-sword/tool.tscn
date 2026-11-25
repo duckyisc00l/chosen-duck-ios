@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://btk4pbo678tdj"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhgbnlqntj43k" path="res://assets/rendered/espada.1.obj" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyc6d"]
+shading_mode = 0
+albedo_color = Color(0.41160026, 0.10913884, 0.10831272, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g7b7a"]
+material = SubResource("StandardMaterial3D_gyc6d")
+size = Vector3(2.8, 0.2, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7b7a"]
+albedo_color = Color(0.30528778, 0.1720897, 0.088189535, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qx4q"]
+albedo_color = Color(0.40716445, 0.14854619, 0.041883364, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqkgv"]
+albedo_color = Color(0.12159691, 0.32335284, 0.1777944, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrv66"]
+albedo_color = Color(0.3356137, 0.22559538, 0.18496704, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpo87"]
+albedo_color = Color(0.22795892, 0.08625702, 0.009986686, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1326004211]
+mesh = SubResource("BoxMesh_g7b7a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696251249]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 6.0264654, 0, 0.04758215)
+mesh = ExtResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_g7b7a")
+surface_material_override/1 = SubResource("StandardMaterial3D_6qx4q")
+surface_material_override/2 = SubResource("StandardMaterial3D_hqkgv")
+surface_material_override/3 = SubResource("StandardMaterial3D_xrv66")
+surface_material_override/4 = SubResource("StandardMaterial3D_bpo87")

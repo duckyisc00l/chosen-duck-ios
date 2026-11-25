@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bxgmgjmiycega"]
+
+[ext_resource type="Texture2D" uid="uid://me2dc5rdlqmn" path="res://assets/textures/tronco.png" id="1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wtx34"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.5
+radial_segments = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhr0q"]
+albedo_texture = ExtResource("1")
+
+[node name="APP" type="Node3D" unique_id=1365233014]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681696387]
+transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_wtx34")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhr0q")
